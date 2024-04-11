@@ -1,0 +1,61 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Final_GK_AD/Final_GK_AD.sim/sim_1/impl/timing/xsim/processor_nomultdiv_time_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Wrapper
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/alu.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module alu
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/bitwise_and.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bitwise_and
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/bitwise_not.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bitwise_not
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/bitwise_or.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bitwise_or
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/cl_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cl_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/cl_sub_adder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cl_sub_adder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/dffe_ref.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dffe_ref
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/latch.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module latch
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/mux_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/mux_2_1bit.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_2_1bit
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/mux_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/mux_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mux_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/register.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module register
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sign_extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sign_extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sll.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sll
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sll_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sll_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sll_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sll_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sll_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sll_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sll_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sll_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sll_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sll_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sra.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sra
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sra_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sra_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sra_16.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sra_16
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sra_2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sra_2
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sra_4.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sra_4
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/sra_8.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sra_8
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/check_processor/check_processor/processor_nomultdiv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module processor_nomultdiv
+INFO: [VRFC 10-2458] undeclared symbol stall, assumed default net type wire [C:/Users/gik4/Downloads/check_processor/check_processor/processor_nomultdiv.v:69]
+WARNING: [VRFC 10-3380] identifier 'take_branch' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor_nomultdiv.v:77]
+WARNING: [VRFC 10-3380] identifier 'bex_insn' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor_nomultdiv.v:78]
+WARNING: [VRFC 10-3380] identifier 'jump_insn' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor_nomultdiv.v:79]

@@ -1,0 +1,39 @@
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto cf0d22f4b5054841b4240d5310aa9f6f --incr --debug typical --relax --mt 2 --maxdelay -L xil_defaultlib -L simprims_ver -L secureip --snapshot processor_nomultdiv_time_impl -transport_int_delays -pulse_r 0 -pulse_int_r 0 -pulse_e 0 -pulse_int_e 0 xil_defaultlib.processor_nomultdiv xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.cl_sub_adder
+Compiling module xil_defaultlib.cl_adder
+Compiling module xil_defaultlib.dffe_ref
+Compiling module xil_defaultlib.register_default
+Compiling module xil_defaultlib.latch
+Compiling module xil_defaultlib.sign_extend
+Compiling module xil_defaultlib.sll_16
+Compiling module xil_defaultlib.mux_2
+Compiling module xil_defaultlib.sll_8
+Compiling module xil_defaultlib.sll_4
+Compiling module xil_defaultlib.sll_2
+Compiling module xil_defaultlib.sll_1
+Compiling module xil_defaultlib.sll
+Compiling module xil_defaultlib.sra_16
+Compiling module xil_defaultlib.sra_8
+Compiling module xil_defaultlib.sra_4
+Compiling module xil_defaultlib.sra_2
+Compiling module xil_defaultlib.sra_1
+Compiling module xil_defaultlib.sra
+Compiling module xil_defaultlib.bitwise_and
+Compiling module xil_defaultlib.bitwise_or
+Compiling module xil_defaultlib.bitwise_not
+Compiling module xil_defaultlib.mux_2_1bit
+Compiling module xil_defaultlib.mux_4
+Compiling module xil_defaultlib.mux_8
+Compiling module xil_defaultlib.alu
+Compiling module xil_defaultlib.processor_nomultdiv
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot processor_nomultdiv_time_impl

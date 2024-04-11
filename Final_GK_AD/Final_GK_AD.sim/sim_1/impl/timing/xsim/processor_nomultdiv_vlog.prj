@@ -1,0 +1,33 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"processor_nomultdiv_time_impl.v" \
+"../../../../../../Downloads/check_processor/check_processor/alu.v" \
+"../../../../../../Downloads/check_processor/check_processor/bitwise_and.v" \
+"../../../../../../Downloads/check_processor/check_processor/bitwise_not.v" \
+"../../../../../../Downloads/check_processor/check_processor/bitwise_or.v" \
+"../../../../../../Downloads/check_processor/check_processor/cl_adder.v" \
+"../../../../../../Downloads/check_processor/check_processor/cl_sub_adder.v" \
+"../../../../../../Downloads/check_processor/check_processor/dffe_ref.v" \
+"../../../../../../Downloads/check_processor/check_processor/latch.v" \
+"../../../../../../Downloads/check_processor/check_processor/mux_2.v" \
+"../../../../../../Downloads/check_processor/check_processor/mux_2_1bit.v" \
+"../../../../../../Downloads/check_processor/check_processor/mux_4.v" \
+"../../../../../../Downloads/check_processor/check_processor/mux_8.v" \
+"../../../../../../Downloads/check_processor/check_processor/register.v" \
+"../../../../../../Downloads/check_processor/check_processor/sign_extend.v" \
+"../../../../../../Downloads/check_processor/check_processor/sll.v" \
+"../../../../../../Downloads/check_processor/check_processor/sll_1.v" \
+"../../../../../../Downloads/check_processor/check_processor/sll_16.v" \
+"../../../../../../Downloads/check_processor/check_processor/sll_2.v" \
+"../../../../../../Downloads/check_processor/check_processor/sll_4.v" \
+"../../../../../../Downloads/check_processor/check_processor/sll_8.v" \
+"../../../../../../Downloads/check_processor/check_processor/sra.v" \
+"../../../../../../Downloads/check_processor/check_processor/sra_1.v" \
+"../../../../../../Downloads/check_processor/check_processor/sra_16.v" \
+"../../../../../../Downloads/check_processor/check_processor/sra_2.v" \
+"../../../../../../Downloads/check_processor/check_processor/sra_4.v" \
+"../../../../../../Downloads/check_processor/check_processor/sra_8.v" \
+"../../../../../../Downloads/check_processor/check_processor/processor_nomultdiv.v" \
+
+# Do not sort compile order
+nosort

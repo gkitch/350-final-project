@@ -1,0 +1,7 @@
+Running: xsim.dir/processor_nomultdiv_time_impl/xsimk.exe -simmode gui -wdb processor_nomultdiv_time_impl.wdb -simrunnum 0 -socket 49756
+Design successfully loaded
+Design Loading Memory Usage: 8720 KB (Peak: 8720 KB)
+Design Loading CPU Usage: 46 ms
+Simulation completed
+Simulation Memory Usage: 9868 KB (Peak: 9868 KB)
+Simulation CPU Usage: 93 ms
