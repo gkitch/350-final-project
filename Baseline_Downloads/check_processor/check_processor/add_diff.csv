@@ -1,0 +1,2 @@
+Test Number, A, B, ALU_OP, Shift_Amt, Result, NE, LT, OVF, Expected Result, Expected NE, Expected LT, Expected OVF
+5,          5,         10, 0, 0,         17,1,0,0,         15,1,1,0

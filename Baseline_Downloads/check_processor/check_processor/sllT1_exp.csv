@@ -1,0 +1,2 @@
+A,B,Opcode,ShiftAmount,Result,isNE,isLT,Overflow
+12, 2, 4, 3, 96, 1, 0, 0

@@ -24,18 +24,47 @@
  *
  **/
 
-module Wrapper (clock, reset);
-	input clock, reset;
+module Wrapper (
+    input CLK100MHZ,
+    input BTNU,
+    input [15:0] SW,
+    output [15:0] LED);
+    
+    wire clock, reset;
+    assign clock = CLK100MHZ;
+    assign reset = BTNU;
+    
+    wire [31:0] q_dmem;
 
-	wire rwe, mwe;
+    wire rwe, mwe;
 	wire[4:0] rd, rs1, rs2;
 	wire[31:0] instAddr, instData, 
 		rData, regA, regB,
 		memAddr, memDataIn, memDataOut;
+	
+	wire io_read, io_write;
+	reg [15:0] SW_Q, SW_M;
 
-
-	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "";
+	assign io_read = (memAddr == 32'd4000) ? 1'b1 : 1'b0;
+	assign io_write = (memAddr == 32'd4001) ? 1'b1 : 1'b0;
+	always @(negedge clock) begin
+	   SW_M <= SW;
+	   SW_Q <= SW_M;
+	end
+	reg [15:0] LED_reg;
+	always @(posedge clock) begin
+	   if (io_write == 1'b1) begin
+	       LED_reg <= memDataIn[15:0];
+	   end else begin
+	       LED_reg <= LED_reg;
+	   end
+	end
+	assign LED = LED_reg;
+	
+	assign q_dmem = (io_read == 1'b1) ? SW : memDataOut;
+//    assign q_dmem = SW;
+  	// ADD YOUR MEMORY FILE HERE
+	localparam INSTR_FILE = "fpga_test2";
 	
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 
@@ -50,7 +79,7 @@ module Wrapper (clock, reset);
 									
 		// RAM
 		.wren(mwe), .address_dmem(memAddr), 
-		.data(memDataIn), .q_dmem(memDataOut)); 
+		.data(memDataIn), .q_dmem(q_dmem)); 
 	
 	// Instruction Memory (ROM)
 	ROM #(.MEMFILE({INSTR_FILE, ".mem"}))

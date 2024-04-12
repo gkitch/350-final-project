@@ -1,0 +1,8 @@
+decoder_32.v
+dffe_ref.v
+mux_32.v
+regfile.v
+regfile_tb.v
+register.v
+register0.v
+tristate.v
