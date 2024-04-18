@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log Wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Wrapper.tcl
+    with args -log stepper_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source stepper_test.tcl
 
 
 
@@ -9,221 +9,80 @@
   **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source Wrapper.tcl -notrace
-Command: synth_design -top Wrapper -part xc7a100tcsg324-1
+source stepper_test.tcl -notrace
+Command: synth_design -top stepper_test -part xc7a100tcsg324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12416
-WARNING: [Synth 8-992] stall is already implicitly declared earlier [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:199]
-WARNING: [Synth 8-992] multdiv_stall is already implicitly declared earlier [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:203]
-WARNING: [Synth 8-992] xm_data_A is already implicitly declared earlier [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:250]
-WARNING: [Synth 8-6901] identifier 'take_branch' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:76]
-WARNING: [Synth 8-6901] identifier 'branch_pc' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:76]
-WARNING: [Synth 8-6901] identifier 'bex_insn' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'bex_pc' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:77]
-WARNING: [Synth 8-6901] identifier 'jump_insn' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:78]
-WARNING: [Synth 8-6901] identifier 'jump_pc' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:78]
-WARNING: [Synth 8-6901] identifier 'alu_inB' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:136]
-WARNING: [Synth 8-6901] identifier 'alu_inB' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:147]
-WARNING: [Synth 8-6901] identifier 'w_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:169]
-WARNING: [Synth 8-6901] identifier 'w_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:169]
-WARNING: [Synth 8-6901] identifier 'm_opcode' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:170]
-WARNING: [Synth 8-6901] identifier 'w_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:174]
-WARNING: [Synth 8-6901] identifier 'w_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:174]
-WARNING: [Synth 8-6901] identifier 'w_opcode' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:174]
-WARNING: [Synth 8-6901] identifier 'm_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:176]
-WARNING: [Synth 8-6901] identifier 'm_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:176]
-WARNING: [Synth 8-6901] identifier 'w_opcode' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:177]
-WARNING: [Synth 8-6901] identifier 'm_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:181]
-WARNING: [Synth 8-6901] identifier 'm_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:181]
-WARNING: [Synth 8-6901] identifier 'w_opcode' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:181]
-WARNING: [Synth 8-6901] identifier 'm_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:188]
-WARNING: [Synth 8-6901] identifier 'm_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:188]
-WARNING: [Synth 8-6901] identifier 'm_opcode' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:189]
-WARNING: [Synth 8-6901] identifier 'm_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:190]
-WARNING: [Synth 8-6901] identifier 'w_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:192]
-WARNING: [Synth 8-6901] identifier 'w_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:192]
-WARNING: [Synth 8-6901] identifier 'm_opcode' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:193]
-WARNING: [Synth 8-6901] identifier 'w_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:194]
-WARNING: [Synth 8-6901] identifier 'w_rd' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:266]
-WARNING: [Synth 8-6901] identifier 'w_opcode' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:267]
-WARNING: [Synth 8-6901] identifier 'w_opcode' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:267]
-WARNING: [Synth 8-6901] identifier 'w_opcode' is used before its declaration [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:267]
+INFO: [Synth 8-7075] Helper process launched with PID 13636
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.160 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Wrapper' [C:/Users/gik4/Downloads/check_processor/check_processor/Wrapper.v:27]
-INFO: [Synth 8-6157] synthesizing module 'processor' [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:20]
-INFO: [Synth 8-6157] synthesizing module 'cl_adder' [C:/Users/gik4/Downloads/check_processor/check_processor/cl_adder.v:1]
-INFO: [Synth 8-6157] synthesizing module 'cl_sub_adder' [C:/Users/gik4/Downloads/check_processor/check_processor/cl_sub_adder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'cl_sub_adder' (1#1) [C:/Users/gik4/Downloads/check_processor/check_processor/cl_sub_adder.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'cl_adder' (2#1) [C:/Users/gik4/Downloads/check_processor/check_processor/cl_adder.v:1]
-INFO: [Synth 8-6157] synthesizing module 'register' [C:/Users/gik4/Downloads/check_processor/check_processor/register.v:1]
-INFO: [Synth 8-6157] synthesizing module 'dffe_ref' [C:/Users/gik4/Downloads/check_processor/check_processor/dffe_ref.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'dffe_ref' (3#1) [C:/Users/gik4/Downloads/check_processor/check_processor/dffe_ref.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'register' (4#1) [C:/Users/gik4/Downloads/check_processor/check_processor/register.v:1]
-INFO: [Synth 8-6157] synthesizing module 'latch' [C:/Users/gik4/Downloads/check_processor/check_processor/latch.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'latch' (5#1) [C:/Users/gik4/Downloads/check_processor/check_processor/latch.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sign_extend' [C:/Users/gik4/Downloads/check_processor/check_processor/sign_extend.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sign_extend' (6#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sign_extend.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_4' [C:/Users/gik4/Downloads/check_processor/check_processor/mux_4.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_2' [C:/Users/gik4/Downloads/check_processor/check_processor/mux_2.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_2' (7#1) [C:/Users/gik4/Downloads/check_processor/check_processor/mux_2.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_4' (8#1) [C:/Users/gik4/Downloads/check_processor/check_processor/mux_4.v:1]
-WARNING: [Synth 8-7071] port 'in3' of module 'mux_4' is unconnected for instance 'aluInputA' [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:183]
-WARNING: [Synth 8-7023] instance 'aluInputA' of module 'mux_4' has 6 connections declared, but only 5 given [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:183]
-WARNING: [Synth 8-7071] port 'in3' of module 'mux_4' is unconnected for instance 'aluInputB' [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:196]
-WARNING: [Synth 8-7023] instance 'aluInputB' of module 'mux_4' has 6 connections declared, but only 5 given [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:196]
-INFO: [Synth 8-6157] synthesizing module 'multdiv' [C:/Users/gik4/Downloads/check_processor/check_processor/multdiv.v:1]
-INFO: [Synth 8-6157] synthesizing module 'multiplier' [C:/Users/gik4/Downloads/check_processor/check_processor/multiplier.v:1]
-WARNING: [Synth 8-6090] variable 'P' is written by both blocking and non-blocking assignments, entire logic could be removed [C:/Users/gik4/Downloads/check_processor/check_processor/multiplier.v:52]
-INFO: [Synth 8-6155] done synthesizing module 'multiplier' (9#1) [C:/Users/gik4/Downloads/check_processor/check_processor/multiplier.v:1]
-INFO: [Synth 8-6157] synthesizing module 'divider' [C:/Users/gik4/Downloads/check_processor/check_processor/divider.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'divider' (10#1) [C:/Users/gik4/Downloads/check_processor/check_processor/divider.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'multdiv' (11#1) [C:/Users/gik4/Downloads/check_processor/check_processor/multdiv.v:1]
-INFO: [Synth 8-6157] synthesizing module 'alu' [C:/Users/gik4/Downloads/check_processor/check_processor/alu.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll' [C:/Users/gik4/Downloads/check_processor/check_processor/sll.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_16' [C:/Users/gik4/Downloads/check_processor/check_processor/sll_16.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_16' (12#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sll_16.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_8' [C:/Users/gik4/Downloads/check_processor/check_processor/sll_8.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_8' (13#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sll_8.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_4' [C:/Users/gik4/Downloads/check_processor/check_processor/sll_4.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_4' (14#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sll_4.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_2' [C:/Users/gik4/Downloads/check_processor/check_processor/sll_2.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_2' (15#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sll_2.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sll_1' [C:/Users/gik4/Downloads/check_processor/check_processor/sll_1.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll_1' (16#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sll_1.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sll' (17#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sll.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra' [C:/Users/gik4/Downloads/check_processor/check_processor/sra.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_16' [C:/Users/gik4/Downloads/check_processor/check_processor/sra_16.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_16' (18#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sra_16.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_8' [C:/Users/gik4/Downloads/check_processor/check_processor/sra_8.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_8' (19#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sra_8.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_4' [C:/Users/gik4/Downloads/check_processor/check_processor/sra_4.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_4' (20#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sra_4.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_2' [C:/Users/gik4/Downloads/check_processor/check_processor/sra_2.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_2' (21#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sra_2.v:1]
-INFO: [Synth 8-6157] synthesizing module 'sra_1' [C:/Users/gik4/Downloads/check_processor/check_processor/sra_1.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra_1' (22#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sra_1.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'sra' (23#1) [C:/Users/gik4/Downloads/check_processor/check_processor/sra.v:1]
-INFO: [Synth 8-6157] synthesizing module 'bitwise_and' [C:/Users/gik4/Downloads/check_processor/check_processor/bitwise_and.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bitwise_and' (24#1) [C:/Users/gik4/Downloads/check_processor/check_processor/bitwise_and.v:1]
-INFO: [Synth 8-6157] synthesizing module 'bitwise_or' [C:/Users/gik4/Downloads/check_processor/check_processor/bitwise_or.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bitwise_or' (25#1) [C:/Users/gik4/Downloads/check_processor/check_processor/bitwise_or.v:1]
-INFO: [Synth 8-6157] synthesizing module 'bitwise_not' [C:/Users/gik4/Downloads/check_processor/check_processor/bitwise_not.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'bitwise_not' (26#1) [C:/Users/gik4/Downloads/check_processor/check_processor/bitwise_not.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_2_1bit' [C:/Users/gik4/Downloads/check_processor/check_processor/mux_2_1bit.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_2_1bit' (27#1) [C:/Users/gik4/Downloads/check_processor/check_processor/mux_2_1bit.v:1]
-INFO: [Synth 8-6157] synthesizing module 'mux_8' [C:/Users/gik4/Downloads/check_processor/check_processor/mux_8.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'mux_8' (28#1) [C:/Users/gik4/Downloads/check_processor/check_processor/mux_8.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'alu' (29#1) [C:/Users/gik4/Downloads/check_processor/check_processor/alu.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'processor' (30#1) [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:20]
-INFO: [Synth 8-6157] synthesizing module 'ROM' [C:/Users/gik4/Downloads/check_processor/check_processor/ROM.v:2]
-	Parameter MEMFILE bound to: 112'b0110011001110000011001110110000101011111011101000110010101110011011101000011001000101110011011010110010101101101 
-INFO: [Synth 8-3876] $readmem data file 'fpga_test2.mem' is read successfully [C:/Users/gik4/Downloads/check_processor/check_processor/ROM.v:11]
-INFO: [Synth 8-6155] done synthesizing module 'ROM' (31#1) [C:/Users/gik4/Downloads/check_processor/check_processor/ROM.v:2]
-INFO: [Synth 8-6157] synthesizing module 'regfile' [C:/Users/gik4/Downloads/check_processor/check_processor/regfile.v:1]
-INFO: [Synth 8-6157] synthesizing module 'decoder_32' [C:/Users/gik4/Downloads/check_processor/check_processor/decoder_32.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'decoder_32' (32#1) [C:/Users/gik4/Downloads/check_processor/check_processor/decoder_32.v:1]
-INFO: [Synth 8-6157] synthesizing module 'register0' [C:/Users/gik4/Downloads/check_processor/check_processor/register0.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'register0' (33#1) [C:/Users/gik4/Downloads/check_processor/check_processor/register0.v:1]
-INFO: [Synth 8-6157] synthesizing module 'tristate' [C:/Users/gik4/Downloads/check_processor/check_processor/tristate.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'tristate' (34#1) [C:/Users/gik4/Downloads/check_processor/check_processor/tristate.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'regfile' (35#1) [C:/Users/gik4/Downloads/check_processor/check_processor/regfile.v:1]
-INFO: [Synth 8-6157] synthesizing module 'RAM' [C:/Users/gik4/Downloads/check_processor/check_processor/RAM.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'RAM' (36#1) [C:/Users/gik4/Downloads/check_processor/check_processor/RAM.v:2]
-INFO: [Synth 8-6155] done synthesizing module 'Wrapper' (37#1) [C:/Users/gik4/Downloads/check_processor/check_processor/Wrapper.v:27]
+INFO: [Synth 8-6157] synthesizing module 'stepper_test' [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.srcs/sources_1/new/stepper_test.v:23]
+INFO: [Synth 8-6157] synthesizing module 'PWMSerializer' [C:/Users/gik4/Downloads/lab8_kit/PWMSerializer.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'PWMSerializer' (1#1) [C:/Users/gik4/Downloads/lab8_kit/PWMSerializer.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'stepper_test' (2#1) [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.srcs/sources_1/new/stepper_test.v:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1329.160 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1329.160 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1329.160 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.107 . Memory (MB): peak = 1329.160 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1329.129 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [C:/Users/gik4/Downloads/check_processor/master.xdc]
-Finished Parsing XDC File [C:/Users/gik4/Downloads/check_processor/master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/gik4/Downloads/check_processor/master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Wrapper_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/Wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/master.xdc]
+Finished Parsing XDC File [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/stepper_test_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/stepper_test_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1415.027 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1329.129 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1415.027 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1415.027 ; gain = 85.867
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1415.027 ; gain = 85.867
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1415.027 ; gain = 85.867
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1415.027 ; gain = 85.867
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   65 Bit       Adders := 2     
-	   3 Input   64 Bit       Adders := 1     
-	   2 Input   32 Bit       Adders := 1     
-	   2 Input    6 Bit       Adders := 2     
-+---XORs : 
-	   3 Input      1 Bit         XORs := 160   
-	   2 Input      1 Bit         XORs := 6     
+	   2 Input    7 Bit       Adders := 1     
 +---Registers : 
-	               65 Bit    Registers := 3     
-	               64 Bit    Registers := 3     
-	               32 Bit    Registers := 3     
-	               16 Bit    Registers := 1     
-	                6 Bit    Registers := 3     
-	                1 Bit    Registers := 1545  
-+---Multipliers : 
-	              32x32  Multipliers := 1     
-+---RAMs : 
-	             128K Bit	(4096 X 32 bit)          RAMs := 1     
-+---ROMs : 
-	                    ROMs := 1     
+	                7 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input   65 Bit        Muxes := 4     
-	   3 Input   65 Bit        Muxes := 1     
-	   2 Input   64 Bit        Muxes := 2     
-	   2 Input   32 Bit        Muxes := 37    
-	   4 Input   32 Bit        Muxes := 1     
-	   3 Input    6 Bit        Muxes := 2     
-	   2 Input    6 Bit        Muxes := 4     
-	   3 Input    5 Bit        Muxes := 2     
-	   2 Input    5 Bit        Muxes := 2     
-	   2 Input    3 Bit        Muxes := 2     
-	   4 Input    2 Bit        Muxes := 1     
-	   3 Input    2 Bit        Muxes := 3     
-	   2 Input    2 Bit        Muxes := 2     
-	   2 Input    1 Bit        Muxes := 13    
+	   2 Input    7 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -239,94 +98,26 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP mult/real_prod0, operation Mode is: A*B.
-DSP Report: operator mult/real_prod0 is absorbed into DSP mult/real_prod0.
-DSP Report: operator mult/real_prod0 is absorbed into DSP mult/real_prod0.
-DSP Report: Generating DSP mult/real_prod_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register mult/real_prod_reg is absorbed into DSP mult/real_prod_reg.
-DSP Report: operator mult/real_prod0 is absorbed into DSP mult/real_prod_reg.
-DSP Report: operator mult/real_prod0 is absorbed into DSP mult/real_prod_reg.
-DSP Report: Generating DSP mult/real_prod0, operation Mode is: A*B.
-DSP Report: operator mult/real_prod0 is absorbed into DSP mult/real_prod0.
-DSP Report: operator mult/real_prod0 is absorbed into DSP mult/real_prod0.
-DSP Report: Generating DSP mult/real_prod_reg, operation Mode is: (PCIN>>17)+A*B.
-DSP Report: register mult/real_prod_reg is absorbed into DSP mult/real_prod_reg.
-DSP Report: operator mult/real_prod0 is absorbed into DSP mult/real_prod_reg.
-DSP Report: operator mult/real_prod0 is absorbed into DSP mult/real_prod_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1415.027 ; gain = 85.867
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-ROM: Preliminary Mapping Report
-+------------+---------------------+---------------+----------------+
-|Module Name | RTL Object          | Depth x Width | Implemented As | 
-+------------+---------------------+---------------+----------------+
-|Wrapper     | InstMem/dataOut_reg | 4096x6        | Block RAM      | 
-+------------+---------------------+---------------+----------------+
-
-
-Block RAM: Preliminary Mapping Report (see note below)
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Wrapper     | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-
-Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
-
-DSP: Preliminary Mapping Report (see note below)
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping    | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|multdiv     | A*B            | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|multdiv     | (PCIN>>17)+A*B | 15     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-|multdiv     | A*B            | 18     | 18     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 0    | 
-|multdiv     | (PCIN>>17)+A*B | 18     | 15     | -      | -      | 48     | 0    | 0    | -    | -    | -     | 0    | 1    | 
-+------------+----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-
-Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:23 . Memory (MB): peak = 1415.027 ; gain = 85.867
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1417.219 ; gain = 88.059
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start ROM, RAM, DSP, Shift Register and Retiming Reporting
----------------------------------------------------------------------------------
-
-Block RAM: Final Mapping Report
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name | RTL Object              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Wrapper     | ProcMem/MemoryArray_reg | 4 K x 32(NO_CHANGE)    | W | R |                        |   |   | Port A           | 0      | 4      | 
-+------------+-------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-
----------------------------------------------------------------------------------
-Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+Finished Timing Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1329.129 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance ProcMem/MemoryArray_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
-INFO: [Synth 8-7052] The timing for the instance InstMem/dataOut_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1426.305 ; gain = 97.145
+Finished Technology Mapping : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1332.746 ; gain = 3.617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -344,37 +135,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1439.160 ; gain = 110.000
+Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1339.500 ; gain = 10.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1439.160 ; gain = 110.000
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1339.500 ; gain = 10.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1439.160 ; gain = 110.000
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1339.500 ; gain = 10.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1439.160 ; gain = 110.000
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1339.500 ; gain = 10.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1439.219 ; gain = 110.059
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1339.500 ; gain = 10.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1439.219 ; gain = 110.059
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1339.500 ; gain = 10.371
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -387,43 +178,30 @@ Report BlackBoxes:
 +-+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |BUFG     |     1|
-|2     |LUT1     |     2|
-|3     |LUT2     |   202|
-|4     |LUT3     |   104|
-|5     |LUT4     |   189|
-|6     |LUT5     |   206|
-|7     |LUT6     |   214|
-|8     |RAMB36E1 |     5|
-|10    |FDCE     |   606|
-|11    |FDRE     |    16|
-|12    |IBUF     |    18|
-|13    |OBUF     |    16|
-+------+---------+------+
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |OBUF |     2|
++------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1439.219 ; gain = 110.059
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1339.500 ; gain = 10.371
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:25 . Memory (MB): peak = 1439.219 ; gain = 24.191
-Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 1439.219 ; gain = 110.059
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1339.500 ; gain = 10.371
+Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1339.500 ; gain = 10.371
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1451.270 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1351.605 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1454.918 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1367.602 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 65f5e1a
+Synth Design complete, checksum: b36a1d46
 INFO: [Common 17-83] Releasing license: Synthesis
-95 Infos, 40 Warnings, 0 Critical Warnings and 0 Errors encountered.
+17 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 1454.918 ; gain = 125.758
-INFO: [Common 17-1381] The checkpoint 'C:/Users/gik4/Final_GK_AD/Final_GK_AD.runs/synth_1/Wrapper.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file Wrapper_utilization_synth.rpt -pb Wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr  4 19:17:59 2024...
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1367.602 ; gain = 38.473
+INFO: [Common 17-1381] The checkpoint 'C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.runs/synth_1/stepper_test.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file stepper_test_utilization_synth.rpt -pb stepper_test_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 18 16:02:49 2024...
