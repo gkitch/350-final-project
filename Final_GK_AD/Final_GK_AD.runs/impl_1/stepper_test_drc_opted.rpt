@@ -1,13 +1,13 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Apr 18 16:03:23 2024
+| Date         : Fri Apr 19 16:23:10 2024
 | Host         : P2-05 running 64-bit major release  (build 9200)
 | Command      : report_drc -file stepper_test_drc_opted.rpt -pb stepper_test_drc_opted.pb -rpx stepper_test_drc_opted.rpx
 | Design       : stepper_test
 | Device       : xc7a100tcsg324-1
 | Speed File   : -1
-| Design State : Fully Routed
+| Design State : Synthesized
 ---------------------------------------------------------------------------------------------------------------------------
 
 Report DRC

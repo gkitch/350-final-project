@@ -22,41 +22,59 @@
 
 module stepper_test(
     input CLK100MHZ,
+    input BTNL,
+    input BTNR,
     input BTNU,
-    output pinA,
-    output pinB
+    input BTND,
+    output pin_XSpeed,
+    output pin_XDir,
+    output pin_YSpeed,
+    output pin_YDir
     );
     
-    localparam MHz = 1000000;
-	localparam SYSTEM_FREQ = 100*MHz; // System clock frequency
-	
-    wire [17:0] counterLimit;
-	assign desiredFreq = 0.01*MHz;
-	assign counterLimit = (SYSTEM_FREQ / desiredFreq*2) - 1;
+    wire clk;
+    assign clk = CLK100MHZ;
+    
+    wire enX, enY;
+    assign enX = (BTNL || BTNR) ? 1'b1 : 1'b0;
+    assign enY = (BTNU || BTND) ? 1'b1 : 1'b0;
+    
+    wire [17:0] stepCounterLimit;
+    //for transition to x, y would have separate files controlling each movement
+	assign stepCounterLimit = 50000;
 	
 	reg clk1MHz = 0;
-	reg [17:0] counter = 0;
+	reg [17:0] stepCounter = 0;
 	always @(posedge clk) begin
-	   if (counter < counterLimit)
-	       counter <= counter + 1;
+	   if (stepCounter < stepCounterLimit)
+	       stepCounter <= stepCounter + 1;
 	   else begin
-	       counter <= 0;
+	       stepCounter <= 0;
 	       clk1MHz <= ~ clk1MHz;
 	   end
     end
     
-    wire[6:0] duty_cycle;
-    wire [6:0] max, min;
-    assign max = 7'b1100100;
-    assign min = 7'b0;
-    assign duty_cycle = clk1MHz ? max : min;
+    assign pin_XSpeed = enX ? clk1MHz : 1'b0;
+    assign pin_YSpeed = enY ? clk1MHz : 1'b0;
     
-    wire stepOut, dirOut;
+    //for direction, set 1'b1 for forwards, 1'b0 for backwards
+    reg xDirection, yDirection;
+    always @(posedge clk) begin
+        if (BTNL == 1)
+            xDirection <= 1'b1;
+        else begin
+            xDirection <= 1'b0;
+        end    
+    end
+    assign pin_XDir = xDirection;
 
-    PWMSerializer pwmOut(clk, reset, duty_cycle, stepOut);
-    assign dirOut = 1'b1; //forwards hardcoded
-    
-    assign pinA = clk1MHz;
-    assign pinB = dirOut;
+    always @(posedge clk) begin
+        if (BTNU == 1)
+            yDirection <= 1'b1;
+        else begin
+            yDirection <= 1'b0;
+        end    
+    end
+    assign pin_YDir = yDirection;
     
 endmodule

@@ -90,10 +90,7 @@ read_mem {
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/fpga_test1.mem
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/fpga_test2.mem
 }
-read_verilog -library xil_defaultlib {
-  C:/Users/gik4/Downloads/lab8_kit/PWMSerializer.v
-  C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.srcs/sources_1/new/stepper_test.v
-}
+read_verilog -library xil_defaultlib C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.srcs/sources_1/new/stepper_test.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
