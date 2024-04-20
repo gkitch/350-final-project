@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.runs/synth_1'
+HD_PWD='C:/Users/ad496/Downloads/350-final-project/Final_GK_AD/Final_GK_AD.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log stepper_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source stepper_test.tcl
+EAStep vivado -log Wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Wrapper.tcl

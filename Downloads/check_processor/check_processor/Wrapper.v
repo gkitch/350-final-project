@@ -34,8 +34,8 @@ module Wrapper (
     output pin_XSpeed,
     output pin_XDir,
     output pin_YSpeed,
-    output pin_YDir,
-    output [15:0] LED);
+    output pin_YDir);
+    //output [15:0] LED);
     
     wire clock, reset;
     assign clock = CLK100MHZ;
@@ -52,7 +52,7 @@ module Wrapper (
 	//call stepper.v for controlling x, y stepping with designated speed/direction
 	//we call our x / y steppers if either buttons indicate or MIPS writes to those registers (and SW is high)
 	x_stepper xMotor(.en(BTNL || BTNR), .xSpeed(xSpeed), .xDirection(xDirection), .out_xSpeed(pin_XSpeed), .out_xDirection(pin_XDir));
-	x_stepper yMotor(.en(BTNU || BTND), .ySpeed(ySpeed), .yDirection(yDirection), .out_ySpeed(pin_YSpeed), .out_yDirection(pin_YDir));
+	x_stepper yMotor(.en(BTNU || BTND), .xSpeed(ySpeed), .xDirection(yDirection), .out_xSpeed(pin_YSpeed), .out_xDirection(pin_YDir));
 
 	//hijack any instruction trying to write to $r1-$r4 - change it to be a button press
 	wire reg1_used, reg2_used, reg3_used, reg4_used;
@@ -79,19 +79,19 @@ module Wrapper (
 	   SW_M <= SW;
 	   SW_Q <= SW_M;
 	end
-	reg [15:0] LED_reg;
-	always @(posedge clock) begin
-	   if (io_write == 1'b1) begin
-	       LED_reg <= memDataIn[15:0];
-	   end else begin
-	       LED_reg <= LED_reg;
-	   end
-	end
-	assign LED = LED_reg;
+//	reg [15:0] LED_reg;
+//	always @(posedge clock) begin
+//	   if (io_write == 1'b1) begin
+//	       LED_reg <= memDataIn[15:0];
+//	   end else begin
+//	       LED_reg <= LED_reg;
+//	   end
+//	end
+//	assign LED = LED_reg;
 	
 	assign q_dmem = (io_read == 1'b1) ? SW : memDataOut;
   	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "fpga_test2";
+	localparam INSTR_FILE = "motor_test";
 	
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 
