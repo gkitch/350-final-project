@@ -35,7 +35,6 @@ module Wrapper (
     output pin_XDir,
     output pin_YSpeed,
     output pin_YDir);
-    //output [15:0] LED);
     
     wire clock, reset;
     assign clock = CLK100MHZ;
@@ -51,8 +50,15 @@ module Wrapper (
 		
 	//call stepper.v for controlling x, y stepping with designated speed/direction
 	//we call our x / y steppers if either buttons indicate or MIPS writes to those registers (and SW is high)
-	x_stepper xMotor(.en(BTNL || BTNR), .xSpeed(xSpeed), .xDirection(xDirection), .out_xSpeed(pin_XSpeed), .out_xDirection(pin_XDir));
-	x_stepper yMotor(.en(BTNU || BTND), .xSpeed(ySpeed), .xDirection(yDirection), .out_xSpeed(pin_YSpeed), .out_xDirection(pin_YDir));
+//	x_stepper xMotor(.en(1'b1), .xSpeed(xSpeed), .xDirection(xDirection), .out_xSpeed(pin_XSpeed), .out_xDirection(pin_XDir));
+//	x_stepper yMotor(.en(1'b1), .xSpeed(ySpeed), .xDirection(yDirection), .out_xSpeed(pin_YSpeed), .out_xDirection(pin_YDir));
+    wire moveL, moveR, moveU, moveD;
+    assign moveL = (xSpeed != 32'd0 && xDirection == 32'd1) ? 1'b1 : 1'b0;
+    assign moveR = (xSpeed != 32'd0 && xDirection == 32'd0) ? 1'b1 : 1'b0;
+    assign moveU = (ySpeed != 32'd0 && yDirection == 32'd1) ? 1'b1 : 1'b0;
+    assign moveD = (ySpeed != 32'd0 && yDirection == 32'd1) ? 1'b1 : 1'b0;
+
+    stepper_2 driveMotor(.btn_LEFT(BTNL), .btn_RIGHT(BTNR), .btn_UP(BTNU), .btn_DOWN(BTND), .xSpeed(pin_XSpeed), .xDir(pin_XDir), .ySpeed(pin_YSpeed), .yDir(pin_YDir));
 
 	//hijack any instruction trying to write to $r1-$r4 - change it to be a button press
 	wire reg1_used, reg2_used, reg3_used, reg4_used;
@@ -70,28 +76,8 @@ module Wrapper (
     assign btn_LEFT = (BTNL || reg3_used) ? 1'b1 : 1'b0;
     assign btn_RIGHT = (BTNR || reg4_used) ? 1'b1 : 1'b0;
 	
-	wire io_read, io_write;
-	reg [15:0] SW_Q, SW_M;
-
-	assign io_read = (memAddr == 32'd4000) ? 1'b1 : 1'b0;
-	assign io_write = (memAddr == 32'd4001) ? 1'b1 : 1'b0;
-	always @(negedge clock) begin
-	   SW_M <= SW;
-	   SW_Q <= SW_M;
-	end
-//	reg [15:0] LED_reg;
-//	always @(posedge clock) begin
-//	   if (io_write == 1'b1) begin
-//	       LED_reg <= memDataIn[15:0];
-//	   end else begin
-//	       LED_reg <= LED_reg;
-//	   end
-//	end
-//	assign LED = LED_reg;
-	
-	assign q_dmem = (io_read == 1'b1) ? SW : memDataOut;
   	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "motor_test";
+	localparam INSTR_FILE = "basic_move";
 	
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 

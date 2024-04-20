@@ -48,7 +48,7 @@ module x_stepper(
 	   end
     end
     
-    assign out_xSpeed = (en && clk1MHz);
+    assign out_xSpeed = (en && clk1MHz) ? clk1MHz : 1'b0;
     
     //for direction, set 1'b1 for forwards, 1'b0 for backwards
     assign out_xDirection = xDirection[0];
