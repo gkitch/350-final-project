@@ -101,8 +101,8 @@ module regfile (
 	register reg17(reg17out, clock, reg17enable, data_writeReg, ctrl_reset);
 	register reg18(reg18out, clock, reg18enable, data_writeReg, ctrl_reset);
 	register reg19(reg19out, clock, reg19enable, data_writeReg, ctrl_reset);
-	register reg20(reg20out, clock, reg20enable, data_writeReg, ctrl_reset);
-	register reg21(reg21out, clock, reg21enable, data_writeReg, ctrl_reset);
+	register reg20(reg20out, clock, 1'b1, switch[0], ctrl_reset);                  //$r20 holds value of SW[0] to toggle between demo and user control
+	register reg21(reg21out, clock, 1'b1, switch[1], ctrl_reset);                  //r21 holds value of SW[1] to toggle to demo_2
 	register reg22(reg22out, clock, reg22enable, data_writeReg, ctrl_reset);
 	register reg23(reg23out, clock, reg23enable, data_writeReg, ctrl_reset);
 	register reg24(reg24out, clock, reg24enable, data_writeReg, ctrl_reset);

@@ -92,6 +92,9 @@ read_mem {
   C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/basic_motor.mem
   C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/basic.mem
   C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/motor_test.mem
+  C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/no_nop.mem
+  C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/square_demo.mem
+  C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/example_master.mem
 }
 read_verilog -library xil_defaultlib {
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/RAM.v

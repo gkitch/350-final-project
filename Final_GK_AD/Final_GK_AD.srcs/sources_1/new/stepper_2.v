@@ -41,7 +41,7 @@ module stepper_2(
     
     wire [17:0] stepCounterLimit;
     //for transition to x, y would have separate files controlling each movement
-	assign stepCounterLimit = 50000;
+	assign stepCounterLimit = 125000;
 	
 	reg clk1MHz = 0;
 	reg [17:0] stepCounter = 0;
@@ -60,7 +60,7 @@ module stepper_2(
     //for direction, set 1'b1 for forwards, 1'b0 for backwards
     reg xDirection, yDirection;
     always @(posedge clk) begin
-        if (btn_LEFT == 1)
+        if (btn_RIGHT == 1)
             xDirection <= 1'b1;
         else begin
             xDirection <= 1'b0;
@@ -69,7 +69,7 @@ module stepper_2(
     assign xDir = xDirection;
 
     always @(posedge clk) begin
-        if (btn_UP == 1)
+        if (btn_DOWN == 1)
             yDirection <= 1'b1;
         else begin
             yDirection <= 1'b0;
