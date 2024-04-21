@@ -1,0 +1,108 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
+| Date         : Sun Apr 21 15:56:37 2024
+| Host         : P2-05 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file Wrapper_control_sets_placed.rpt
+| Design       : Wrapper
+| Device       : xc7a100t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    30 |
+|    Minimum number of control sets                        |    30 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |     1 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    30 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     1 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    29 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |             351 |          183 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              16 |            4 |
+| Yes          | No                    | No                     |             864 |          260 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++----------------------+------------------------------------------+------------------+------------------+----------------+--------------+
+|     Clock Signal     |               Enable Signal              | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------------+------------------------------------------+------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG |                                          |                  |                6 |              7 |         1.17 |
+|  CLK100MHZ_IBUF_BUFG |                                          | driveMotor/clear |                4 |             16 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg23enable |                  |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg22enable |                  |               10 |             32 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg5enable  |                  |                7 |             32 |         4.57 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg14enable |                  |                6 |             32 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg19enable |                  |                7 |             32 |         4.57 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg29enable |                  |               12 |             32 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg15enable |                  |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg20enable |                  |               11 |             32 |         2.91 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg21enable |                  |               12 |             32 |         2.67 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg30enable |                  |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg6enable  |                  |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg13enable |                  |                5 |             32 |         6.40 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg18enable |                  |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg16enable |                  |               10 |             32 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg17enable |                  |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg7enable  |                  |               19 |             32 |         1.68 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[24].my_dff/reg31enable |                  |                9 |             32 |         3.56 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg10enable |                  |               10 |             32 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg24enable |                  |               10 |             32 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg25enable |                  |               10 |             32 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg27enable |                  |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg8enable  |                  |               22 |             32 |         1.45 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg9enable  |                  |               14 |             32 |         2.29 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg26enable |                  |               10 |             32 |         3.20 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg28enable |                  |                6 |             32 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg11enable |                  |                6 |             32 |         5.33 |
+|  CLK100MHZ_IBUF_BUFG | CPU/mw/insn/loop1[29].my_dff/reg12enable |                  |                6 |             32 |         5.33 |
+| ~CLK100MHZ_IBUF_BUFG |                                          |                  |              177 |            344 |         1.94 |
++----------------------+------------------------------------------+------------------+------------------+----------------+--------------+
+
+

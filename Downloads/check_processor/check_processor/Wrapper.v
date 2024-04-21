@@ -34,11 +34,12 @@ module Wrapper (
     output pin_XSpeed,
     output pin_XDir,
     output pin_YSpeed,
-    output pin_YDir);
+    output pin_YDir,
+    output [15:0] LED);
     
     wire clock, reset;
     assign clock = CLK100MHZ;
-    assign reset = BTNU;
+    assign reset = 1'b0;
     
     wire [31:0] q_dmem;
 
@@ -48,6 +49,8 @@ module Wrapper (
 		rData, regA, regB,
 		memAddr, memDataIn, memDataOut;
 		
+	wire [31:0] xSpeed, xDirection, ySpeed, yDirection;
+		
 	//call stepper.v for controlling x, y stepping with designated speed/direction
 	//we call our x / y steppers if either buttons indicate or MIPS writes to those registers (and SW is high)
 //	x_stepper xMotor(.en(1'b1), .xSpeed(xSpeed), .xDirection(xDirection), .out_xSpeed(pin_XSpeed), .out_xDirection(pin_XDir));
@@ -56,28 +59,36 @@ module Wrapper (
     assign moveL = (xSpeed != 32'd0 && xDirection == 32'd1) ? 1'b1 : 1'b0;
     assign moveR = (xSpeed != 32'd0 && xDirection == 32'd0) ? 1'b1 : 1'b0;
     assign moveU = (ySpeed != 32'd0 && yDirection == 32'd1) ? 1'b1 : 1'b0;
-    assign moveD = (ySpeed != 32'd0 && yDirection == 32'd1) ? 1'b1 : 1'b0;
+    assign moveD = (ySpeed != 32'd0 && yDirection == 32'd0) ? 1'b1 : 1'b0;
+    
+    assign LED[0] = moveL;
+    assign LED[1] = moveR;
+    assign LED[2] = moveU;
+    assign LED[3] = moveD;
+    assign LED[15:4] = 12'b0;
 
-    stepper_2 driveMotor(.btn_LEFT(BTNL), .btn_RIGHT(BTNR), .btn_UP(BTNU), .btn_DOWN(BTND), .xSpeed(pin_XSpeed), .xDir(pin_XDir), .ySpeed(pin_YSpeed), .yDir(pin_YDir));
+//    stepper_2 driveMotor(.clock(CLK100MHZ), .btn_LEFT(BTNL), .btn_RIGHT(BTNR), .btn_UP(BTNU), .btn_DOWN(BTND), .xSpeed(pin_XSpeed), .xDir(pin_XDir), .ySpeed(pin_YSpeed), .yDir(pin_YDir));
+    stepper_2 driveMotor(.clock(CLK100MHZ), .btn_LEFT(moveL), .btn_RIGHT(moveR), .btn_UP(moveU), .btn_DOWN(moveD), .xSpeed(pin_XSpeed), .xDir(pin_XDir), .ySpeed(pin_YSpeed), .yDir(pin_YDir));
+
 
 	//hijack any instruction trying to write to $r1-$r4 - change it to be a button press
-	wire reg1_used, reg2_used, reg3_used, reg4_used;
-	//if rd = reg1-4 and rwe (basically, arithmetic with that reg)
-	assign reg1_used = (rd == 32'd1 && rwe) ? 1'b1 : 1'b0;
-	assign reg2_used = (rd == 32'd2 && rwe) ? 1'b1 : 1'b0;
-	assign reg3_used = (rd == 32'd3 && rwe) ? 1'b1 : 1'b0;
-	assign reg4_used = (rd == 32'd4 && rwe) ? 1'b1 : 1'b0;
+//	wire reg1_used, reg2_used, reg3_used, reg4_used;
+//	//if rd = reg1-4 and rwe (basically, arithmetic with that reg)
+//	assign reg1_used = (rd == 32'd1 && rwe) ? 1'b1 : 1'b0;
+//	assign reg2_used = (rd == 32'd2 && rwe) ? 1'b1 : 1'b0;
+//	assign reg3_used = (rd == 32'd3 && rwe) ? 1'b1 : 1'b0;
+//	assign reg4_used = (rd == 32'd4 && rwe) ? 1'b1 : 1'b0;
     
     //need to modify this so it handles the code inputs only when SW[0] is high (when we use hardcoded insn)
     //otherwise, we should never have MIPS that touches $r1 - $r4
-    wire btn_UP, btn_DOWN, btn_LEFT, btn_RIGHT;
-    assign btn_UP = (BTNU || reg1_used) ? 1'b1 : 1'b0;
-    assign btn_DOWN = (BTND || reg2_used) ? 1'b1 : 1'b0;
-    assign btn_LEFT = (BTNL || reg3_used) ? 1'b1 : 1'b0;
-    assign btn_RIGHT = (BTNR || reg4_used) ? 1'b1 : 1'b0;
+//    wire btn_UP, btn_DOWN, btn_LEFT, btn_RIGHT;
+//    assign btn_UP = (BTNU || reg1_used) ? 1'b1 : 1'b0;
+//    assign btn_DOWN = (BTND || reg2_used) ? 1'b1 : 1'b0;
+//    assign btn_LEFT = (BTNL || reg3_used) ? 1'b1 : 1'b0;
+//    assign btn_RIGHT = (BTNR || reg4_used) ? 1'b1 : 1'b0;
 	
   	// ADD YOUR MEMORY FILE HERE
-	localparam INSTR_FILE = "basic_move";
+	localparam INSTR_FILE = "motor_test";
 	
 	// Main Processing Unit
 	processor CPU(.clock(clock), .reset(reset), 

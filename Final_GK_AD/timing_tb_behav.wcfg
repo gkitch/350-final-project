@@ -3,87 +3,96 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="timing_tb_behav.wdb" id="1">
+      <db_ref path="New_Wrapper_tb_behav.wdb" id="1">
          <top_modules>
+            <top_module name="New_Wrapper_tb" />
             <top_module name="glbl" />
-            <top_module name="timing_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="736.514 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,052.698 ns"></ZoomEndTime>
-      <Cursor1Time time="864.333 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="617.001 ns"></ZoomEndTime>
+      <Cursor1Time time="24.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="116"></ValueColumnWidth>
+      <NameColumnWidth column_width="252"></NameColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="16" />
-   <wvobject fp_name="/timing_tb/CLK100MHZ" type="logic">
-      <obj_property name="ElementShortName">CLK100MHZ</obj_property>
-      <obj_property name="ObjectShortName">CLK100MHZ</obj_property>
+   <WVObjectSize size="18" />
+   <wvobject fp_name="/New_Wrapper_tb/btnu" type="logic">
+      <obj_property name="ElementShortName">btnu</obj_property>
+      <obj_property name="ObjectShortName">btnu</obj_property>
    </wvobject>
-   <wvobject fp_name="/timing_tb/BTNU" type="logic">
-      <obj_property name="ElementShortName">BTNU</obj_property>
-      <obj_property name="ObjectShortName">BTNU</obj_property>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/CPU/ctrl_readRegA" type="array">
+      <obj_property name="ElementShortName">ctrl_readRegA[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_readRegA[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/timing_tb/SW" type="array">
-      <obj_property name="ElementShortName">SW[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SW[15:0]</obj_property>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/CPU/ctrl_readRegB" type="array">
+      <obj_property name="ElementShortName">ctrl_readRegB[4:0]</obj_property>
+      <obj_property name="ObjectShortName">ctrl_readRegB[4:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/timing_tb/LED" type="array">
-      <obj_property name="ElementShortName">LED[15:0]</obj_property>
-      <obj_property name="ObjectShortName">LED[15:0]</obj_property>
+   <wvobject fp_name="/New_Wrapper_tb/out_xSpeed" type="logic">
+      <obj_property name="ElementShortName">out_xSpeed</obj_property>
+      <obj_property name="ObjectShortName">out_xSpeed</obj_property>
    </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/io_read" type="logic">
-      <obj_property name="ElementShortName">io_read</obj_property>
-      <obj_property name="ObjectShortName">io_read</obj_property>
+   <wvobject fp_name="/New_Wrapper_tb/out_xDir" type="logic">
+      <obj_property name="ElementShortName">out_xDir</obj_property>
+      <obj_property name="ObjectShortName">out_xDir</obj_property>
    </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/io_write" type="logic">
-      <obj_property name="ElementShortName">io_write</obj_property>
-      <obj_property name="ObjectShortName">io_write</obj_property>
+   <wvobject fp_name="/New_Wrapper_tb/out_ySpeed" type="logic">
+      <obj_property name="ElementShortName">out_ySpeed</obj_property>
+      <obj_property name="ObjectShortName">out_ySpeed</obj_property>
    </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/memAddr" type="array">
-      <obj_property name="ElementShortName">memAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">memAddr[31:0]</obj_property>
+   <wvobject fp_name="/New_Wrapper_tb/out_yDir" type="logic">
+      <obj_property name="ElementShortName">out_yDir</obj_property>
+      <obj_property name="ObjectShortName">out_yDir</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/driveMotor/clk1MHz" type="logic">
+      <obj_property name="ElementShortName">clk1MHz</obj_property>
+      <obj_property name="ObjectShortName">clk1MHz</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/driveMotor/ySpeed" type="logic">
+      <obj_property name="ElementShortName">ySpeed</obj_property>
+      <obj_property name="ObjectShortName">ySpeed</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/moveL" type="logic">
+      <obj_property name="ElementShortName">moveL</obj_property>
+      <obj_property name="ObjectShortName">moveL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/moveR" type="logic">
+      <obj_property name="ElementShortName">moveR</obj_property>
+      <obj_property name="ObjectShortName">moveR</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/moveU" type="logic">
+      <obj_property name="ElementShortName">moveU</obj_property>
+      <obj_property name="ObjectShortName">moveU</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/moveD" type="logic">
+      <obj_property name="ElementShortName">moveD</obj_property>
+      <obj_property name="ObjectShortName">moveD</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/CPU/address_imem" type="array">
+      <obj_property name="ElementShortName">address_imem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">address_imem[31:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/CPU/q_imem" type="array">
+      <obj_property name="ElementShortName">q_imem[31:0]</obj_property>
+      <obj_property name="ObjectShortName">q_imem[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/driveMotor/stepCounterLimit" type="array">
+      <obj_property name="ElementShortName">stepCounterLimit[17:0]</obj_property>
+      <obj_property name="ObjectShortName">stepCounterLimit[17:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/New_Wrapper_tb/wrap/driveMotor/stepCounter" type="array">
+      <obj_property name="ElementShortName">stepCounter[17:0]</obj_property>
+      <obj_property name="ObjectShortName">stepCounter[17:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/instAddr" type="array">
-      <obj_property name="ElementShortName">instAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">instAddr[31:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/CPU/clock" type="logic">
-      <obj_property name="ElementShortName">clock</obj_property>
-      <obj_property name="ObjectShortName">clock</obj_property>
-   </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/LED_reg" type="array">
-      <obj_property name="ElementShortName">LED_reg[15:0]</obj_property>
-      <obj_property name="ObjectShortName">LED_reg[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/memDataIn" type="array">
-      <obj_property name="ElementShortName">memDataIn[31:0]</obj_property>
-      <obj_property name="ObjectShortName">memDataIn[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/memDataOut" type="array">
-      <obj_property name="ElementShortName">memDataOut[31:0]</obj_property>
-      <obj_property name="ObjectShortName">memDataOut[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/CPU/data_writeReg" type="array">
-      <obj_property name="ElementShortName">data_writeReg[31:0]</obj_property>
-      <obj_property name="ObjectShortName">data_writeReg[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/CPU/ctrl_writeReg" type="array">
-      <obj_property name="ElementShortName">ctrl_writeReg[4:0]</obj_property>
-      <obj_property name="ObjectShortName">ctrl_writeReg[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/CPU/ctrl_writeEnable" type="logic">
-      <obj_property name="ElementShortName">ctrl_writeEnable</obj_property>
-      <obj_property name="ObjectShortName">ctrl_writeEnable</obj_property>
-   </wvobject>
-   <wvobject fp_name="/timing_tb/srapper/q_dmem" type="array">
-      <obj_property name="ElementShortName">q_dmem[31:0]</obj_property>
-      <obj_property name="ObjectShortName">q_dmem[31:0]</obj_property>
+   <wvobject fp_name="/New_Wrapper_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
    </wvobject>
 </wave_config>

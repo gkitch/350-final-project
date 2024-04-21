@@ -1,15 +1,16 @@
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto cf0d22f4b5054841b4240d5310aa9f6f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot timing_tb_behav xil_defaultlib.timing_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto cf0d22f4b5054841b4240d5310aa9f6f --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot New_Wrapper_tb_behav xil_defaultlib.New_Wrapper_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-5021] port 'in3' is not connected on this instance [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:183]
-WARNING: [VRFC 10-5021] port 'in3' is not connected on this instance [C:/Users/gik4/Downloads/check_processor/check_processor/processor.v:196]
+WARNING: [VRFC 10-5021] port 'in3' is not connected on this instance [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/processor.v:183]
+WARNING: [VRFC 10-5021] port 'in3' is not connected on this instance [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/processor.v:196]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.stepper_2
 Compiling module xil_defaultlib.cl_sub_adder
 Compiling module xil_defaultlib.cl_adder
 Compiling module xil_defaultlib.dffe_ref
@@ -40,13 +41,11 @@ Compiling module xil_defaultlib.mux_2_1bit
 Compiling module xil_defaultlib.mux_8
 Compiling module xil_defaultlib.alu
 Compiling module xil_defaultlib.processor
-Compiling module xil_defaultlib.ROM(MEMFILE="fpga_test2.mem")
-Compiling module xil_defaultlib.decoder_32
-Compiling module xil_defaultlib.register0
+Compiling module xil_defaultlib.ROM(MEMFILE="motor_test.mem")
 Compiling module xil_defaultlib.tristate
 Compiling module xil_defaultlib.regfile
 Compiling module xil_defaultlib.RAM
 Compiling module xil_defaultlib.Wrapper
-Compiling module xil_defaultlib.timing_tb
+Compiling module xil_defaultlib.New_Wrapper_tb
 Compiling module xil_defaultlib.glbl
-Built simulation snapshot timing_tb_behav
+Built simulation snapshot New_Wrapper_tb_behav

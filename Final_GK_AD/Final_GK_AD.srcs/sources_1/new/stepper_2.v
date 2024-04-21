@@ -21,7 +21,7 @@
 
 
 module stepper_2(
-    input CLK100MHZ,
+    input clock,
     input btn_LEFT,
     input btn_RIGHT,
     input btn_UP,
@@ -33,7 +33,7 @@ module stepper_2(
     );
     
     wire clk;
-    assign clk = CLK100MHZ;
+    assign clk = clock;
     
     wire enX, enY;
     assign enX = (btn_LEFT || btn_RIGHT) ? 1'b1 : 1'b0;

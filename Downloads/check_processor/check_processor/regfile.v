@@ -18,21 +18,21 @@ module regfile (
 	input [15:0] switch;
 	output [31:0] ySpeed, yDirection, xSpeed, xDirection;
 	
-	wire en_reg1, en_reg2, en_reg3, en_reg4;
-	wire [31:0] data_reg1, data_reg2, data_reg3, data_reg4;
-	assign en_reg1 = (switch[0] == 1'b1) ? reg1enable : 1'b1;
-	assign en_reg2 = (switch[0] == 1'b1) ? reg2enable : 1'b1;
-	assign en_reg3 = (switch[0] == 1'b1) ? reg3enable : 1'b1;
-	assign en_reg4 = (switch[0] == 1'b1) ? reg4enable : 1'b1;
-	assign data_reg1 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_UP};
-	assign data_reg2 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_DOWN};
-	assign data_reg3 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_LEFT};
-	assign data_reg4 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_RIGHT};
+//	wire en_reg1, en_reg2, en_reg3, en_reg4;
+//	wire [31:0] data_reg1, data_reg2, data_reg3, data_reg4;
+//	assign en_reg1 = (switch[0] == 1'b1) ? reg1enable : 1'b1;
+//	assign en_reg2 = (switch[0] == 1'b1) ? reg2enable : 1'b1;
+//	assign en_reg3 = (switch[0] == 1'b1) ? reg3enable : 1'b1;
+//	assign en_reg4 = (switch[0] == 1'b1) ? reg4enable : 1'b1;
+//	assign data_reg1 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_UP};
+//	assign data_reg2 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_DOWN};
+//	assign data_reg3 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_LEFT};
+//	assign data_reg4 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_RIGHT};
 	
 	assign ySpeed = reg11out;
 	assign yDirection = reg12out;
 	assign xSpeed = reg13out;
-	assign xDirection = reg13out;
+	assign xDirection = reg14out;
 
 	wire[31:0] reg0out, reg1out, reg2out, reg3out, reg4out, reg5out, reg6out, reg7out, reg8out, reg9out, reg10out, reg11out, reg12out, reg13out, reg14out, reg15out, reg16out, reg17out, reg18out, reg19out, reg20out, reg21out, reg22out, reg23out, reg24out, reg25out, reg26out, reg27out, reg28out, reg29out, reg30out, reg31out;
 
@@ -41,6 +41,7 @@ module regfile (
 	wire [31:0] writeEnableDecoder = 1'b1 << ctrl_writeReg;
 
 	//and And0(reg0enable, writeEnableDecoder[0], ctrl_writeEnable);
+	assign reg0enable = 1'b0;
 	and And1(reg1enable, writeEnableDecoder[1], ctrl_writeEnable);
 	and And2(reg2enable, writeEnableDecoder[2], ctrl_writeEnable);
 	and And3(reg3enable, writeEnableDecoder[3], ctrl_writeEnable);
@@ -74,109 +75,115 @@ module regfile (
 	and And31(reg31enable, writeEnableDecoder[31], ctrl_writeEnable);
 
 	//out, input_enable, clock, in, reset
-	register reg0(reg0out, reg0enable, clock, data_writeReg, ctrl_reset);
-	register reg1(reg1out, en_reg1, clock, data_reg1, ctrl_reset);         //BTNU pressed --> reg1 = 1 (if SW[1] then don't override)
-	register reg2(reg2out, en_reg2, clock, data_reg2, ctrl_reset);         //BTND pressed --> reg2 = 1
-	register reg3(reg3out, en_reg3, clock, data_reg3, ctrl_reset);         //BTNL pressed --> reg3 = 1
-	register reg4(reg4out, en_reg4, clock, data_reg4, ctrl_reset);         //BTNR pressed --> reg4 = 1
-	register reg5(reg5out, reg5enable, clock, data_writeReg, ctrl_reset);
-	register reg6(reg6out, reg6enable, clock, data_writeReg, ctrl_reset);
-	register reg7(reg7out, reg7enable, clock, data_writeReg, ctrl_reset);
-	register reg8(reg8out, reg8enable, clock, data_writeReg, ctrl_reset);
-	register reg9(reg9out, reg9enable, clock, data_writeReg, ctrl_reset);
-	register reg10(reg10out, reg10enable, clock, data_writeReg, ctrl_reset);
-	register reg11(reg11out, reg11enable, clock, data_writeReg, ctrl_reset);
-	register reg12(reg12out, reg12enable, clock, data_writeReg, ctrl_reset);
-	register reg13(reg13out, reg13enable, clock, data_writeReg, ctrl_reset);
-	register reg14(reg14out, reg14enable, clock, data_writeReg, ctrl_reset);
-	register reg15(reg15out, reg15enable, clock, data_writeReg, ctrl_reset);
-	register reg16(reg16out, reg16enable, clock, data_writeReg, ctrl_reset);
-	register reg17(reg17out, reg17enable, clock, data_writeReg, ctrl_reset);
-	register reg18(reg18out, reg18enable, clock, data_writeReg, ctrl_reset);
-	register reg19(reg19out, reg19enable, clock, data_writeReg, ctrl_reset);
-	register reg20(reg20out, reg20enable, clock, data_writeReg, ctrl_reset);
-	register reg21(reg21out, reg21enable, clock, data_writeReg, ctrl_reset);
-	register reg22(reg22out, reg22enable, clock, data_writeReg, ctrl_reset);
-	register reg23(reg23out, reg23enable, clock, data_writeReg, ctrl_reset);
-	register reg24(reg24out, reg24enable, clock, data_writeReg, ctrl_reset);
-	register reg25(reg25out, reg25enable, clock, data_writeReg, ctrl_reset);
-	register reg26(reg26out, reg26enable, clock, data_writeReg, ctrl_reset);
-	register reg27(reg27out, reg27enable, clock, data_writeReg, ctrl_reset);
-	register reg28(reg28out, reg28enable, clock, data_writeReg, ctrl_reset);
-	register reg29(reg29out, reg29enable, clock, data_writeReg, ctrl_reset);
-	register reg30(reg30out, reg30enable, clock, data_writeReg, ctrl_reset);
-	register reg31(reg31out, reg31enable, clock, data_writeReg, ctrl_reset);
+//	change to my register --> module register(readOut, clk, in_enable, writeIn, clear);
+
+	register reg0(reg0out, clock, reg0enable, data_writeReg, ctrl_reset);
+	register reg1(reg1out, clock, 1'b1, {31'b0, btn_UP}, ctrl_reset);         //BTNU pressed --> reg1 = 1 (if SW[1] then don't override)
+	register reg2(reg2out, clock, 1'b1, {31'b0, btn_DOWN}, ctrl_reset);         //BTND pressed --> reg2 = 1
+	register reg3(reg3out, clock, 1'b1, {31'b0, btn_LEFT}, ctrl_reset);         //BTNL pressed --> reg3 = 1
+	register reg4(reg4out, clock, 1'b1, {31'b0, btn_RIGHT}, ctrl_reset);         //BTNR pressed --> reg4 = 1
+//	register reg1(reg1out, clock, reg1enable, data_writeReg, ctrl_reset);
+//	register reg2(reg2out, clock, reg2enable, data_writeReg, ctrl_reset);
+//	register reg3(reg3out, clock, reg3enable, data_writeReg, ctrl_reset);
+//	register reg4(reg4out, clock, reg4enable, data_writeReg, ctrl_reset);
+	register reg5(reg5out, clock, reg5enable, data_writeReg, ctrl_reset);
+	register reg6(reg6out, clock, reg6enable, data_writeReg, ctrl_reset);
+	register reg7(reg7out, clock, reg7enable, data_writeReg, ctrl_reset);
+	register reg8(reg8out, clock, reg8enable, data_writeReg, ctrl_reset);
+	register reg9(reg9out, clock, reg9enable, data_writeReg, ctrl_reset);
+	register reg10(reg10out, clock, reg10enable, data_writeReg, ctrl_reset);
+	register reg11(reg11out, clock, reg11enable, data_writeReg, ctrl_reset);
+	register reg12(reg12out, clock, reg12enable, data_writeReg, ctrl_reset);
+	register reg13(reg13out, clock, reg13enable, data_writeReg, ctrl_reset);
+	register reg14(reg14out, clock, reg14enable, data_writeReg, ctrl_reset);
+	register reg15(reg15out, clock, reg15enable, data_writeReg, ctrl_reset);
+	register reg16(reg16out, clock, reg16enable, data_writeReg, ctrl_reset);
+	register reg17(reg17out, clock, reg17enable, data_writeReg, ctrl_reset);
+	register reg18(reg18out, clock, reg18enable, data_writeReg, ctrl_reset);
+	register reg19(reg19out, clock, reg19enable, data_writeReg, ctrl_reset);
+	register reg20(reg20out, clock, reg20enable, data_writeReg, ctrl_reset);
+	register reg21(reg21out, clock, reg21enable, data_writeReg, ctrl_reset);
+	register reg22(reg22out, clock, reg22enable, data_writeReg, ctrl_reset);
+	register reg23(reg23out, clock, reg23enable, data_writeReg, ctrl_reset);
+	register reg24(reg24out, clock, reg24enable, data_writeReg, ctrl_reset);
+	register reg25(reg25out, clock, reg25enable, data_writeReg, ctrl_reset);
+	register reg26(reg26out, clock, reg26enable, data_writeReg, ctrl_reset);
+	register reg27(reg27out, clock, reg27enable, data_writeReg, ctrl_reset);
+	register reg28(reg28out, clock, reg28enable, data_writeReg, ctrl_reset);
+	register reg29(reg29out, clock, reg29enable, data_writeReg, ctrl_reset);
+	register reg30(reg30out, clock, reg30enable, data_writeReg, ctrl_reset);
+	register reg31(reg31out, clock, reg31enable, data_writeReg, ctrl_reset);
 
 	wire[31:0] regAdecode;
 	assign regAdecode = 1'b1 << ctrl_readRegA;
-
-	tristate triA0(reg0out, regAdecode[0], data_readRegA);
-	tristate triA1(reg1out, regAdecode[1], data_readRegA);
-	tristate triA2(reg2out, regAdecode[2], data_readRegA);
-	tristate triA3(reg3out, regAdecode[3], data_readRegA);
-	tristate triA4(reg4out, regAdecode[4], data_readRegA);
-	tristate triA5(reg5out, regAdecode[5], data_readRegA);
-	tristate triA6(reg6out, regAdecode[6], data_readRegA);
-	tristate triA7(reg7out, regAdecode[7], data_readRegA);
-	tristate triA8(reg8out, regAdecode[8], data_readRegA);
-	tristate triA9(reg9out, regAdecode[9], data_readRegA);
-	tristate triA10(reg10out, regAdecode[10], data_readRegA);
-	tristate triA11(reg11out, regAdecode[11], data_readRegA);
-	tristate triA12(reg12out, regAdecode[12], data_readRegA);
-	tristate triA13(reg13out, regAdecode[13], data_readRegA);
-	tristate triA14(reg14out, regAdecode[14], data_readRegA);
-	tristate triA15(reg15out, regAdecode[15], data_readRegA);
-	tristate triA16(reg16out, regAdecode[16], data_readRegA);
-	tristate triA17(reg17out, regAdecode[17], data_readRegA);
-	tristate triA18(reg18out, regAdecode[18], data_readRegA);
-	tristate triA19(reg19out, regAdecode[19], data_readRegA);
-	tristate triA20(reg20out, regAdecode[20], data_readRegA);
-	tristate triA21(reg21out, regAdecode[21], data_readRegA);
-	tristate triA22(reg22out, regAdecode[22], data_readRegA);
-	tristate triA23(reg23out, regAdecode[23], data_readRegA);
-	tristate triA24(reg24out, regAdecode[24], data_readRegA);
-	tristate triA25(reg25out, regAdecode[25], data_readRegA);
-	tristate triA26(reg26out, regAdecode[26], data_readRegA);
-	tristate triA27(reg27out, regAdecode[27], data_readRegA);
-	tristate triA28(reg28out, regAdecode[28], data_readRegA);
-	tristate triA29(reg29out, regAdecode[29], data_readRegA);
-	tristate triA30(reg30out, regAdecode[30], data_readRegA);
-	tristate triA31(reg31out, regAdecode[31], data_readRegA);
+//change to my tristate --> module tristate(out, in, enable);
+	tristate triA0(data_readRegA, reg0out, regAdecode[0]);
+	tristate triA1(data_readRegA, reg1out, regAdecode[1]);
+	tristate triA2(data_readRegA, reg2out, regAdecode[2]);
+	tristate triA3(data_readRegA, reg3out, regAdecode[3]);
+	tristate triA4(data_readRegA, reg4out, regAdecode[4]);
+	tristate triA5(data_readRegA, reg5out, regAdecode[5]);
+	tristate triA6(data_readRegA, reg6out, regAdecode[6]);
+	tristate triA7(data_readRegA, reg7out, regAdecode[7]);
+	tristate triA8(data_readRegA, reg8out, regAdecode[8]);
+	tristate triA9(data_readRegA, reg9out, regAdecode[9]);
+	tristate triA10(data_readRegA, reg10out, regAdecode[10]);
+	tristate triA11(data_readRegA, reg11out, regAdecode[11]);
+	tristate triA12(data_readRegA, reg12out, regAdecode[12]);
+	tristate triA13(data_readRegA, reg13out, regAdecode[13]);
+	tristate triA14(data_readRegA, reg14out, regAdecode[14]);
+	tristate triA15(data_readRegA, reg15out, regAdecode[15]);
+	tristate triA16(data_readRegA, reg16out, regAdecode[16]);
+	tristate triA17(data_readRegA, reg17out, regAdecode[17]);
+	tristate triA18(data_readRegA, reg18out, regAdecode[18]);
+	tristate triA19(data_readRegA, reg19out, regAdecode[19]);
+	tristate triA20(data_readRegA, reg20out, regAdecode[20]);
+	tristate triA21(data_readRegA, reg21out, regAdecode[21]);
+	tristate triA22(data_readRegA, reg22out, regAdecode[22]);
+	tristate triA23(data_readRegA, reg23out, regAdecode[23]);
+	tristate triA24(data_readRegA, reg24out, regAdecode[24]);
+	tristate triA25(data_readRegA, reg25out, regAdecode[25]);
+	tristate triA26(data_readRegA, reg26out, regAdecode[26]);
+	tristate triA27(data_readRegA, reg27out, regAdecode[27]);
+	tristate triA28(data_readRegA, reg28out, regAdecode[28]);
+	tristate triA29(data_readRegA, reg29out, regAdecode[29]);
+	tristate triA30(data_readRegA, reg30out, regAdecode[30]);
+	tristate triA31(data_readRegA, reg31out, regAdecode[31]);
 
 	wire[31:0] regBdecode;
 	assign regBdecode = 1'b1 << ctrl_readRegB;
 
-	tristate triB0(reg0out, regBdecode[0], data_readRegB);
-	tristate triB1(reg1out, regBdecode[1], data_readRegB);
-	tristate triB2(reg2out, regBdecode[2], data_readRegB);
-	tristate triB3(reg3out, regBdecode[3], data_readRegB);
-	tristate triB4(reg4out, regBdecode[4], data_readRegB);
-	tristate triB5(reg5out, regBdecode[5], data_readRegB);
-	tristate triB6(reg6out, regBdecode[6], data_readRegB);
-	tristate triB7(reg7out, regBdecode[7], data_readRegB);
-	tristate triB8(reg8out, regBdecode[8], data_readRegB);
-	tristate triB9(reg9out, regBdecode[9], data_readRegB);
-	tristate triB10(reg10out, regBdecode[10], data_readRegB);
-	tristate triB11(reg11out, regBdecode[11], data_readRegB);
-	tristate triB12(reg12out, regBdecode[12], data_readRegB);
-	tristate triB13(reg13out, regBdecode[13], data_readRegB);
-	tristate triB14(reg14out, regBdecode[14], data_readRegB);
-	tristate triB15(reg15out, regBdecode[15], data_readRegB);
-	tristate triB16(reg16out, regBdecode[16], data_readRegB);
-	tristate triB17(reg17out, regBdecode[17], data_readRegB);
-	tristate triB18(reg18out, regBdecode[18], data_readRegB);
-	tristate triB19(reg19out, regBdecode[19], data_readRegB);
-	tristate triB20(reg20out, regBdecode[20], data_readRegB);
-	tristate triB21(reg21out, regBdecode[21], data_readRegB);
-	tristate triB22(reg22out, regBdecode[22], data_readRegB);
-	tristate triB23(reg23out, regBdecode[23], data_readRegB);
-	tristate triB24(reg24out, regBdecode[24], data_readRegB);
-	tristate triB25(reg25out, regBdecode[25], data_readRegB);
-	tristate triB26(reg26out, regBdecode[26], data_readRegB);
-	tristate triB27(reg27out, regBdecode[27], data_readRegB);
-	tristate triB28(reg28out, regBdecode[28], data_readRegB);
-	tristate triB29(reg29out, regBdecode[29], data_readRegB);
-	tristate triB30(reg30out, regBdecode[30], data_readRegB);
-	tristate triB31(reg31out, regBdecode[31], data_readRegB);
+	tristate triB0(data_readRegB, reg0out, regBdecode[0]);
+	tristate triB1(data_readRegB, reg1out, regBdecode[1]);
+	tristate triB2(data_readRegB, reg2out, regBdecode[2]);
+	tristate triB3(data_readRegB, reg3out, regBdecode[3]);
+	tristate triB4(data_readRegB, reg4out, regBdecode[4]);
+	tristate triB5(data_readRegB, reg5out, regBdecode[5]);
+	tristate triB6(data_readRegB, reg6out, regBdecode[6]);
+	tristate triB7(data_readRegB, reg7out, regBdecode[7]);
+	tristate triB8(data_readRegB, reg8out, regBdecode[8]);
+	tristate triB9(data_readRegB, reg9out, regBdecode[9]);
+	tristate triB10(data_readRegB, reg10out, regBdecode[10]);
+	tristate triB11(data_readRegB, reg11out, regBdecode[11]);
+	tristate triB12(data_readRegB, reg12out, regBdecode[12]);
+	tristate triB13(data_readRegB, reg13out, regBdecode[13]);
+	tristate triB14(data_readRegB, reg14out, regBdecode[14]);
+	tristate triB15(data_readRegB, reg15out, regBdecode[15]);
+	tristate triB16(data_readRegB, reg16out, regBdecode[16]);
+	tristate triB17(data_readRegB, reg17out, regBdecode[17]);
+	tristate triB18(data_readRegB, reg18out, regBdecode[18]);
+	tristate triB19(data_readRegB, reg19out, regBdecode[19]);
+	tristate triB20(data_readRegB, reg20out, regBdecode[20]);
+	tristate triB21(data_readRegB, reg21out, regBdecode[21]);
+	tristate triB22(data_readRegB, reg22out, regBdecode[22]);
+	tristate triB23(data_readRegB, reg23out, regBdecode[23]);
+	tristate triB24(data_readRegB, reg24out, regBdecode[24]);
+	tristate triB25(data_readRegB, reg25out, regBdecode[25]);
+	tristate triB26(data_readRegB, reg26out, regBdecode[26]);
+	tristate triB27(data_readRegB, reg27out, regBdecode[27]);
+	tristate triB28(data_readRegB, reg28out, regBdecode[28]);
+	tristate triB29(data_readRegB, reg29out, regBdecode[29]);
+	tristate triB30(data_readRegB, reg30out, regBdecode[30]);
+	tristate triB31(data_readRegB, reg31out, regBdecode[31]);
 
 endmodule
