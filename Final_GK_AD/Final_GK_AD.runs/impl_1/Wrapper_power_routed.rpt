@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Sun Apr 21 18:29:03 2024
+| Date             : Sun Apr 21 19:33:25 2024
 | Host             : P2-05 running 64-bit major release  (build 9200)
 | Command          : report_power -file Wrapper_power_routed.rpt -pb Wrapper_power_summary_routed.pb -rpx Wrapper_power_routed.rpx
 | Design           : Wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.128        |
+| Total On-Chip Power (W)  | 0.129        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 0.031        |
@@ -53,18 +53,17 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.004 |        3 |       --- |             --- |
-| Slice Logic    |     0.010 |     5586 |       --- |             --- |
-|   LUT as Logic |     0.009 |     2407 |     63400 |            3.80 |
+| Slice Logic    |     0.009 |     5949 |       --- |             --- |
+|   LUT as Logic |     0.009 |     2833 |     63400 |            4.47 |
 |   CARRY4       |    <0.001 |       97 |     15850 |            0.61 |
-|   Register     |    <0.001 |     1562 |    126800 |            1.23 |
-|   F7/F8 Muxes  |    <0.001 |       46 |     63400 |            0.07 |
-|   Others       |     0.000 |     1201 |       --- |             --- |
-| Signals        |     0.014 |     3965 |       --- |             --- |
+|   Register     |    <0.001 |     1527 |    126800 |            1.20 |
+|   Others       |     0.000 |     1165 |       --- |             --- |
+| Signals        |     0.014 |     4442 |       --- |             --- |
 | Block RAM      |     0.003 |        3 |       135 |            2.22 |
 | DSPs           |     0.001 |        4 |       240 |            1.67 |
-| I/O            |    <0.001 |       27 |       210 |           12.86 |
+| I/O            |    <0.001 |       29 |       210 |           13.81 |
 | Static Power   |     0.097 |          |           |                 |
-| Total          |     0.128 |          |           |                 |
+| Total          |     0.129 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -144,19 +143,19 @@ Table of Contents
 | Name           | Power (W) |
 +----------------+-----------+
 | Wrapper        |     0.031 |
-|   CPU          |     0.025 |
+|   CPU          |     0.024 |
 |     dx         |     0.009 |
-|       insn     |     0.008 |
+|       insn     |     0.007 |
 |     fd         |     0.004 |
 |       insn     |     0.004 |
-|     mw         |     0.005 |
-|       insn     |     0.004 |
+|     mw         |     0.003 |
+|       insn     |     0.002 |
+|       myPC     |     0.001 |
 |     mymultdiv  |     0.004 |
 |       div      |     0.001 |
 |       mult     |     0.003 |
-|     xm         |     0.001 |
 |   InstMem      |     0.003 |
-|   RegisterFile |     0.003 |
+|   RegisterFile |     0.004 |
 +----------------+-----------+
 
 

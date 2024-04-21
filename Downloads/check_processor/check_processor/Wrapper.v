@@ -30,6 +30,7 @@ module Wrapper (
     input BTND,
     input BTNR,
     input BTNL,
+    input BTNC,
     input [15:0] SW,
     output pin_XSpeed,
     output pin_XDir,
@@ -100,7 +101,7 @@ module Wrapper (
 		.ctrl_readRegA(rs1), .ctrl_readRegB(rs2), 
 		.data_writeReg(rData), .data_readRegA(regA), .data_readRegB(regB),
 		//added values to be accessed / hardwired to (r1-r4 are buttons, r11-r14 are outputs for speed/direction)
-		.btn_UP(BTNU), .btn_DOWN(BTND), .btn_LEFT(BTNL), .btn_RIGHT(BTNR),
+		.btn_UP(BTNU), .btn_DOWN(BTND), .btn_LEFT(BTNL), .btn_RIGHT(BTNR), .btn_CENTER(BTNC),
 		.switch(SW),
 		.ySpeed(ySpeed), .yDirection(yDirection), .xSpeed(xSpeed), .xDirection(xDirection));
 						

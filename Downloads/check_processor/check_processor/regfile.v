@@ -3,7 +3,7 @@ module regfile (
 	ctrl_writeEnable, ctrl_reset, ctrl_writeReg,
 	ctrl_readRegA, ctrl_readRegB, data_writeReg,
 	data_readRegA, data_readRegB,
-	btn_UP, btn_DOWN, btn_LEFT, btn_RIGHT,
+	btn_UP, btn_DOWN, btn_LEFT, btn_RIGHT, btn_CENTER,
 	switch,
 	ySpeed, yDirection, xSpeed, xDirection
 );
@@ -14,20 +14,9 @@ module regfile (
 	
 	output [31:0] data_readRegA, data_readRegB;
 	
-	input btn_UP, btn_DOWN, btn_LEFT, btn_RIGHT;
+	input btn_UP, btn_DOWN, btn_LEFT, btn_RIGHT, btn_CENTER;
 	input [15:0] switch;
 	output [31:0] ySpeed, yDirection, xSpeed, xDirection;
-	
-//	wire en_reg1, en_reg2, en_reg3, en_reg4;
-//	wire [31:0] data_reg1, data_reg2, data_reg3, data_reg4;
-//	assign en_reg1 = (switch[0] == 1'b1) ? reg1enable : 1'b1;
-//	assign en_reg2 = (switch[0] == 1'b1) ? reg2enable : 1'b1;
-//	assign en_reg3 = (switch[0] == 1'b1) ? reg3enable : 1'b1;
-//	assign en_reg4 = (switch[0] == 1'b1) ? reg4enable : 1'b1;
-//	assign data_reg1 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_UP};
-//	assign data_reg2 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_DOWN};
-//	assign data_reg3 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_LEFT};
-//	assign data_reg4 = (switch[0] == 1'b1) ? data_writeReg : {31'b0, btn_RIGHT};
 	
 	assign ySpeed = reg11out;
 	assign yDirection = reg12out;
@@ -82,11 +71,7 @@ module regfile (
 	register reg2(reg2out, clock, 1'b1, {31'b0, btn_DOWN}, ctrl_reset);         //BTND pressed --> reg2 = 1
 	register reg3(reg3out, clock, 1'b1, {31'b0, btn_LEFT}, ctrl_reset);         //BTNL pressed --> reg3 = 1
 	register reg4(reg4out, clock, 1'b1, {31'b0, btn_RIGHT}, ctrl_reset);         //BTNR pressed --> reg4 = 1
-//	register reg1(reg1out, clock, reg1enable, data_writeReg, ctrl_reset);
-//	register reg2(reg2out, clock, reg2enable, data_writeReg, ctrl_reset);
-//	register reg3(reg3out, clock, reg3enable, data_writeReg, ctrl_reset);
-//	register reg4(reg4out, clock, reg4enable, data_writeReg, ctrl_reset);
-	register reg5(reg5out, clock, reg5enable, data_writeReg, ctrl_reset);
+	register reg5(reg5out, clock, 1'b1, {31'b0, btn_CENTER}, ctrl_reset);       //BTNC pressed --> set (0, 0) position
 	register reg6(reg6out, clock, reg6enable, data_writeReg, ctrl_reset);
 	register reg7(reg7out, clock, reg7enable, data_writeReg, ctrl_reset);
 	register reg8(reg8out, clock, reg8enable, data_writeReg, ctrl_reset);
@@ -101,9 +86,9 @@ module regfile (
 	register reg17(reg17out, clock, reg17enable, data_writeReg, ctrl_reset);
 	register reg18(reg18out, clock, reg18enable, data_writeReg, ctrl_reset);
 	register reg19(reg19out, clock, reg19enable, data_writeReg, ctrl_reset);
-	register reg20(reg20out, clock, 1'b1, switch[0], ctrl_reset);                  //$r20 holds value of SW[0] to toggle between demo and user control
-	register reg21(reg21out, clock, 1'b1, switch[1], ctrl_reset);                  //r21 holds value of SW[1] to toggle to demo_2
-	register reg22(reg22out, clock, reg22enable, data_writeReg, ctrl_reset);
+	register reg20(reg20out, clock, 1'b1, switch[0], ctrl_reset);                  //$r20 initializes return to origin
+	register reg21(reg21out, clock, 1'b1, switch[1], ctrl_reset);                  //r21 holds value of SW[1] to toggle to demo_1
+	register reg22(reg22out, clock, 1'b1, switch[2], ctrl_reset);                  //r22 toggles to demo 2
 	register reg23(reg23out, clock, reg23enable, data_writeReg, ctrl_reset);
 	register reg24(reg24out, clock, reg24enable, data_writeReg, ctrl_reset);
 	register reg25(reg25out, clock, reg25enable, data_writeReg, ctrl_reset);
