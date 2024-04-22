@@ -89,7 +89,7 @@ module regfile (
 	register reg20(reg20out, clock, 1'b1, switch[0], ctrl_reset);                  //$r20 initializes return to origin
 	register reg21(reg21out, clock, 1'b1, switch[1], ctrl_reset);                  //r21 holds value of SW[1] to toggle to demo_1
 	register reg22(reg22out, clock, 1'b1, switch[2], ctrl_reset);                  //r22 toggles to demo 2
-	register reg23(reg23out, clock, reg23enable, data_writeReg, ctrl_reset);
+	register reg23(reg23out, clock, 1'b1, switch[3], ctrl_reset);                  //r23 toggles to ECE demo
 	register reg24(reg24out, clock, reg24enable, data_writeReg, ctrl_reset);
 	register reg25(reg25out, clock, reg25enable, data_writeReg, ctrl_reset);
 	register reg26(reg26out, clock, reg26enable, data_writeReg, ctrl_reset);
