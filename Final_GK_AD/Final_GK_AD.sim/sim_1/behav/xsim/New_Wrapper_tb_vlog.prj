@@ -1,5 +1,6 @@
 # compile verilog/system verilog design source files
 verilog xil_defaultlib  \
+"../../../../../Downloads/check_processor/PWMSerializer.v" \
 "../../../../../Downloads/check_processor/check_processor/RAM.v" \
 "../../../../../Downloads/check_processor/check_processor/ROM.v" \
 "../../../../../Downloads/check_processor/check_processor/Wrapper.v" \

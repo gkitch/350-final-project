@@ -69,6 +69,7 @@ module Wrapper (
 //    stepper_2 driveMotor(.clock(CLK100MHZ), .btn_LEFT(BTNL), .btn_RIGHT(BTNR), .btn_UP(BTNU), .btn_DOWN(BTND), .xSpeed(pin_XSpeed), .xDir(pin_XDir), .ySpeed(pin_YSpeed), .yDir(pin_YDir));
     stepper_2 driveMotor(.clock(CLK100MHZ), .btn_LEFT(moveL), .btn_RIGHT(moveR), .btn_UP(moveU), .btn_DOWN(moveD), .xSpeed(pin_XSpeed), .xDir(pin_XDir), .ySpeed(pin_YSpeed), .yDir(pin_YDir));
 
+//  powering servo
 	
   	// ADD YOUR MEMORY FILE HERE
 	localparam INSTR_FILE = "example_master";

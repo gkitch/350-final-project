@@ -2,8 +2,9 @@
 2020.2
 Jun 10 2021
 20:04:57
-C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/RAM.v,1712932925,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/ROM.v,,RAM,,,,,,,,
-C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/ROM.v,1712932925,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/Wrapper.v,,ROM,,,,,,,,
+C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/PWMSerializer.v,1713836502,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/RAM.v,,PWMSerializer,,,,,,,,
+C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/RAM.v,1713823776,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/ROM.v,,RAM,,,,,,,,
+C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/ROM.v,1713823776,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/Wrapper.v,,ROM,,,,,,,,
 C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/Wrapper.v,1713728637,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/alu.v,,Wrapper,,,,,,,,
 C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/alu.v,1712932925,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/bitwise_and.v,,alu,,,,,,,,
 C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/bitwise_and.v,1712932925,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/bitwise_not.v,,bitwise_and,,,,,,,,
@@ -37,6 +38,6 @@ C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_pr
 C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/sra_4.v,1712932926,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/sra_8.v,,sra_4,,,,,,,,
 C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/sra_8.v,1712932926,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.srcs/sources_1/new/stepper_2.v,,sra_8,,,,,,,,
 C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/tristate.v,1713722751,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.srcs/sim_1/new/New_Wrapper_tb.v,,tristate,,,,,,,,
-C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.sim/sim_1/behav/xsim/glbl.v,1712931984,verilog,,,,glbl,,,,,,,,
+C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.sim/sim_1/behav/xsim/glbl.v,1713823780,verilog,,,,glbl,,,,,,,,
 C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.srcs/sim_1/new/New_Wrapper_tb.v,1713721007,verilog,,,,New_Wrapper_tb,,,,,,,,
 C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.srcs/sources_1/new/stepper_2.v,1713717095,verilog,,C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/tristate.v,,stepper_2,,,,,,,,

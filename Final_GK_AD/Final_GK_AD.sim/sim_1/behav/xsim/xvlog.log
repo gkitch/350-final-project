@@ -1,3 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/PWMSerializer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PWMSerializer
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/RAM.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module RAM
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/ROM.v" into library xil_defaultlib
@@ -63,10 +65,11 @@ WARNING: [VRFC 10-3380] identifier 'w_rd' is used before its declaration [C:/Use
 WARNING: [VRFC 10-3380] identifier 'w_opcode' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/processor.v:267]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module regfile
-WARNING: [VRFC 10-3380] identifier 'reg11out' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:32]
-WARNING: [VRFC 10-3380] identifier 'reg12out' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:33]
-WARNING: [VRFC 10-3380] identifier 'reg13out' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:34]
-WARNING: [VRFC 10-3380] identifier 'reg13out' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:35]
+WARNING: [VRFC 10-3380] identifier 'reg11out' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:25]
+WARNING: [VRFC 10-3380] identifier 'reg12out' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:26]
+WARNING: [VRFC 10-3380] identifier 'reg13out' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:27]
+WARNING: [VRFC 10-3380] identifier 'reg14out' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:28]
+WARNING: [VRFC 10-3380] identifier 'reg15out' is used before its declaration [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:30]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/register.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module register
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/sign_extend.v" into library xil_defaultlib
