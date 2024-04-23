@@ -10,7 +10,9 @@ main:
     #checking if switches have been turned on (init. demos)
     bne $r20, $r0, return_to_x_origin
     bne $r21, $r0, demo_1
-    bne $r22, $r0, demo_2
+    bne $r22, $r0, demo_2 #Square
+    bne $r23, $r0, demo_3 #ECE
+    bne $r24, $r0, demo_4 #Spiraling square
     #checking if we have pressed any buttons
     bne $r1, $r0, upPressed
     bne $r2, $r0, downPressed
@@ -154,10 +156,423 @@ demo_2:
 
     j main
 
+demo_3: #ECE Demo
+    #Letter E
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #Letter C
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #Letter E
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    j main
+
+demo_4: #Spiraling square
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 26
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 26
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 26
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 25
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 22
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    j main
+
 stall:
     addi $r28, $r28, 1
     bne $r28, $r29, stall
     jr $r31
-
-
-

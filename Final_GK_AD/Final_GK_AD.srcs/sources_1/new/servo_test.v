@@ -40,7 +40,7 @@ module servo_test(
     assign clock = CLK100MHZ;
     assign reset = 1'b0;
         
-    PWMSerializer servo_test(.clk(clock), .reset(reset), .regIn(BTNU), .signal(pin_servo));
+    PWMSerializer servo_test(.clk(clock), .reset(reset), .regIn({31'b0, BTNU}), .signal(pin_servo));
     
     assign pin_XDir = 0;
     assign pin_YDir = 0;
