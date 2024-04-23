@@ -5,7 +5,9 @@ module regfile (
 	data_readRegA, data_readRegB,
 	btn_UP, btn_DOWN, btn_LEFT, btn_RIGHT, btn_CENTER,
 	switch,
-	ySpeed, yDirection, xSpeed, xDirection
+	ySpeed, yDirection, xSpeed, xDirection,
+	currentX, currentY,
+	servo
 );
 
 	input clock, ctrl_writeEnable, ctrl_reset;
@@ -16,12 +18,16 @@ module regfile (
 	
 	input btn_UP, btn_DOWN, btn_LEFT, btn_RIGHT, btn_CENTER;
 	input [15:0] switch;
+	input [31:0] currentX, currentY;
 	output [31:0] ySpeed, yDirection, xSpeed, xDirection;
+	output [31:0] servo;
 	
 	assign ySpeed = reg11out;
 	assign yDirection = reg12out;
 	assign xSpeed = reg13out;
 	assign xDirection = reg14out;
+	
+	assign servo = reg15out;
 
 	wire[31:0] reg0out, reg1out, reg2out, reg3out, reg4out, reg5out, reg6out, reg7out, reg8out, reg9out, reg10out, reg11out, reg12out, reg13out, reg14out, reg15out, reg16out, reg17out, reg18out, reg19out, reg20out, reg21out, reg22out, reg23out, reg24out, reg25out, reg26out, reg27out, reg28out, reg29out, reg30out, reg31out;
 
@@ -72,16 +78,16 @@ module regfile (
 	register reg3(reg3out, clock, 1'b1, {31'b0, btn_LEFT}, ctrl_reset);         //BTNL pressed --> reg3 = 1
 	register reg4(reg4out, clock, 1'b1, {31'b0, btn_RIGHT}, ctrl_reset);         //BTNR pressed --> reg4 = 1
 	register reg5(reg5out, clock, 1'b1, {31'b0, btn_CENTER}, ctrl_reset);       //BTNC pressed --> set (0, 0) position
-	register reg6(reg6out, clock, reg6enable, data_writeReg, ctrl_reset);
+	register reg6(reg6out, clock, 1'b1, {31'b0, switch[15]}, ctrl_reset);      //holds SW[15] to control servo
 	register reg7(reg7out, clock, reg7enable, data_writeReg, ctrl_reset);
-	register reg8(reg8out, clock, reg8enable, data_writeReg, ctrl_reset);
-	register reg9(reg9out, clock, reg9enable, data_writeReg, ctrl_reset);
+	register reg8(reg8out, clock, 1'b1, currentX, ctrl_reset);      //holds currentX position
+	register reg9(reg9out, clock, 1'b1, currentY, ctrl_reset);      //holds currentY position
 	register reg10(reg10out, clock, reg10enable, data_writeReg, ctrl_reset);
-	register reg11(reg11out, clock, reg11enable, data_writeReg, ctrl_reset);
-	register reg12(reg12out, clock, reg12enable, data_writeReg, ctrl_reset);
-	register reg13(reg13out, clock, reg13enable, data_writeReg, ctrl_reset);
-	register reg14(reg14out, clock, reg14enable, data_writeReg, ctrl_reset);
-	register reg15(reg15out, clock, reg15enable, data_writeReg, ctrl_reset);
+	register reg11(reg11out, clock, reg11enable, data_writeReg, ctrl_reset);   //holds ySpeed value
+	register reg12(reg12out, clock, reg12enable, data_writeReg, ctrl_reset);   //holds yDirection value
+	register reg13(reg13out, clock, reg13enable, data_writeReg, ctrl_reset);   //holds xSpeed value
+	register reg14(reg14out, clock, reg14enable, data_writeReg, ctrl_reset);   //holds xDirection value
+	register reg15(reg15out, clock, reg15enable, data_writeReg, ctrl_reset);   //holds servo value
 	register reg16(reg16out, clock, reg16enable, data_writeReg, ctrl_reset);
 	register reg17(reg17out, clock, reg17enable, data_writeReg, ctrl_reset);
 	register reg18(reg18out, clock, reg18enable, data_writeReg, ctrl_reset);

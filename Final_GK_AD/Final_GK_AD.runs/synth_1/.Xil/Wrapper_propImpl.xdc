@@ -83,3 +83,5 @@ set_property src_info {type:XDC file:1 line:87 export:INPUT save:INPUT read:READ
 set_property -dict { PACKAGE_PIN E18   IOSTANDARD LVCMOS33 } [get_ports { pin_YSpeed }]; #IO_L21P_T3_DQS_15 Sch=ja[3]
 set_property src_info {type:XDC file:1 line:88 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN G17   IOSTANDARD LVCMOS33 } [get_ports { pin_YDir }]; #IO_L18N_T2_A23_15 Sch=ja[4]
+set_property src_info {type:XDC file:1 line:89 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D17   IOSTANDARD LVCMOS33 } [get_ports { pin_servo }]; #IO_L16N_T2_A27_15 Sch=ja[7]

@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
+set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
@@ -89,14 +89,12 @@ OPTRACE "Adding files" START { }
 read_mem {
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/fpga_test1.mem
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/fpga_test2.mem
-  C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/basic_motor.mem
-  C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/basic.mem
-  C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/motor_test.mem
-  C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/no_nop.mem
-  C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/square_demo.mem
-  C:/Users/gik4/Downloads/ECE350_FinalProject/MIPS_asm/example_master.mem
+  C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/MIPS/motor_test.mem
+  C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/MIPS/servo_test.mem
+  C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/MIPS/example_master.mem
 }
 read_verilog -library xil_defaultlib {
+  C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/PWMSerializer.v
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/RAM.v
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/ROM.v
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/alu.v

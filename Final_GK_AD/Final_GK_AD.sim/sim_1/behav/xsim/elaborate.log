@@ -4,13 +4,20 @@ Running: C:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto cf0d22f4b5
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'writeIn' [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:95]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'writeIn' [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:96]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'writeIn' [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:97]
+WARNING: [VRFC 10-3091] actual bit length 1 differs from formal bit length 32 for port 'writeIn' [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/regfile.v:98]
 WARNING: [VRFC 10-5021] port 'in3' is not connected on this instance [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/processor.v:183]
 WARNING: [VRFC 10-5021] port 'in3' is not connected on this instance [C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/check_processor/processor.v:196]
 Completed static elaboration
 Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/PWMSerializer.v" Line 8. Module PWMSerializer_default doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/PWMSerializer.v" Line 8. Module PWMSerializer_default doesn't have a timescale but at least one module in design has a timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.stepper_2
+Compiling module xil_defaultlib.PWMSerializer_default
 Compiling module xil_defaultlib.cl_sub_adder
 Compiling module xil_defaultlib.cl_adder
 Compiling module xil_defaultlib.dffe_ref
@@ -41,7 +48,7 @@ Compiling module xil_defaultlib.mux_2_1bit
 Compiling module xil_defaultlib.mux_8
 Compiling module xil_defaultlib.alu
 Compiling module xil_defaultlib.processor
-Compiling module xil_defaultlib.ROM(MEMFILE="motor_test.mem")
+Compiling module xil_defaultlib.ROM(MEMFILE="example_master.mem"...
 Compiling module xil_defaultlib.tristate
 Compiling module xil_defaultlib.regfile
 Compiling module xil_defaultlib.RAM
