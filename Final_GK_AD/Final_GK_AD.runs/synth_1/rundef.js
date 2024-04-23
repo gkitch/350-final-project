@@ -23,7 +23,11 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
+<<<<<<< HEAD
          "-log servo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source servo.tcl" );
+=======
+         "-log servo_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source servo_test.tcl" );
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
 
 
 

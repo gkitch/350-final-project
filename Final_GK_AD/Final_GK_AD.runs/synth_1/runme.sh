@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.runs/synth_1'
+HD_PWD='C:/Users/ad496/Downloads/350-final-project/Final_GK_AD/Final_GK_AD.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -40,4 +40,8 @@ EAStep()
      fi
 }
 
+<<<<<<< HEAD
 EAStep vivado -log servo.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source servo.tcl
+=======
+EAStep vivado -log servo_test.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source servo_test.tcl
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b

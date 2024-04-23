@@ -36,6 +36,7 @@ module Wrapper (
     output pin_XDir,
     output pin_YSpeed,
     output pin_YDir,
+    output pin_servo,
     output [15:0] LED);
     
     wire clock, reset;
@@ -50,26 +51,64 @@ module Wrapper (
 		rData, regA, regB,
 		memAddr, memDataIn, memDataOut;
 		
-	wire [31:0] xSpeed, xDirection, ySpeed, yDirection;
+	wire [31:0] xSpeed, xDirection, ySpeed, yDirection, servoReg;
 		
 	//call stepper.v for controlling x, y stepping with designated speed/direction
 	//we call our x / y steppers if either buttons indicate or MIPS writes to those registers (and SW is high)
-    wire moveL, moveR, moveU, moveD;
+    wire moveL, moveR, moveU, moveD, moveServo;
     assign moveL = (xSpeed != 32'd0 && xDirection == 32'd1) ? 1'b1 : 1'b0;
     assign moveR = (xSpeed != 32'd0 && xDirection == 32'd0) ? 1'b1 : 1'b0;
     assign moveU = (ySpeed != 32'd0 && yDirection == 32'd1) ? 1'b1 : 1'b0;
     assign moveD = (ySpeed != 32'd0 && yDirection == 32'd0) ? 1'b1 : 1'b0;
+    assign moveServo = (servoReg != 32'b0) ? 1'b1 : 1'b0;
+    
+    //if we moveL, -1 in xPositionReg; moveR, +1 in xPosReg
+    //if we moveU, -1 in yPositionReg; moveD, +1 in yPosReg
+    reg [31:0] x_pos, y_pos;
+
+    always @(posedge clock) begin
+        if (BTNC || reset) begin
+            x_pos <= 0;
+            y_pos <= 0;
+        end
+        if (moveL) begin
+            x_pos <= x_pos - 1;
+        end
+        if (moveR) begin
+            x_pos <= x_pos + 1;
+        end
+        if (moveU) begin
+            y_pos <= y_pos - 1;
+        end
+        if (moveD) begin
+            y_pos <= y_pos + 1;
+        end
+    end     
+    
+    wire [31:0] curX, curY;
+    assign curX = x_pos;
+    assign curY = y_pos;
     
     assign LED[0] = moveL;
     assign LED[1] = moveR;
     assign LED[2] = moveU;
     assign LED[3] = moveD;
-    assign LED[15:4] = 12'b0;
+    assign LED[15] = moveServo;
+    assign LED[14:4] = 11'b0;
 
 //    stepper_2 driveMotor(.clock(CLK100MHZ), .btn_LEFT(BTNL), .btn_RIGHT(BTNR), .btn_UP(BTNU), .btn_DOWN(BTND), .xSpeed(pin_XSpeed), .xDir(pin_XDir), .ySpeed(pin_YSpeed), .yDir(pin_YDir));
-    stepper_2 driveMotor(.clock(CLK100MHZ), .btn_LEFT(moveL), .btn_RIGHT(moveR), .btn_UP(moveU), .btn_DOWN(moveD), .xSpeed(pin_XSpeed), .xDir(pin_XDir), .ySpeed(pin_YSpeed), .yDir(pin_YDir));
+    stepper_2 driveMotor(.clock(clock), .btn_LEFT(moveL), .btn_RIGHT(moveR), .btn_UP(moveU), .btn_DOWN(moveD), .xSpeed(pin_XSpeed), .xDir(pin_XDir), .ySpeed(pin_YSpeed), .yDir(pin_YDir));
 
+<<<<<<< HEAD
 //  powering servo
+=======
+    //servo control with PWM Serializer to raise / lower pen
+    //input is SW[15], leftmost switch where down means pen lowered, up means pen raised
+    //SW[15] is stored in reg6, read out from reg15 
+    //JA[7], pin_servo is our FPGA output signal pin
+    PWMSerializer penServo(.clk(clock), .reset(reset), .regIn(servoReg), .signal(pin_servo));
+    //in MIPS, we simply need to set $r15 != 0, which triggers loop to raise pen
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
 	
   	// ADD YOUR MEMORY FILE HERE
 	localparam INSTR_FILE = "example_master";
@@ -104,7 +143,9 @@ module Wrapper (
 		//added values to be accessed / hardwired to (r1-r4 are buttons, r11-r14 are outputs for speed/direction)
 		.btn_UP(BTNU), .btn_DOWN(BTND), .btn_LEFT(BTNL), .btn_RIGHT(BTNR), .btn_CENTER(BTNC),
 		.switch(SW),
-		.ySpeed(ySpeed), .yDirection(yDirection), .xSpeed(xSpeed), .xDirection(xDirection));
+		.ySpeed(ySpeed), .yDirection(yDirection), .xSpeed(xSpeed), .xDirection(xDirection),
+		.currentX(curX), .currentY(curY),
+		.servo(servoReg));
 						
 	// Processor Memory (RAM)
 	RAM ProcMem(.clk(clock), 

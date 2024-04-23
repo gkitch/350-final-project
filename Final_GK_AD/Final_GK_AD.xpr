@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="55" Path="C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/Final_GK_AD.xpr">
+<Project Version="7" Minor="55" Path="C:/Users/ad496/Downloads/350-final-project/Final_GK_AD/Final_GK_AD.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="cf0d22f4b5054841b4240d5310aa9f6f"/>
@@ -60,7 +60,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="105"/>
+    <Option Name="WTXSimLaunchSim" Val="109"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -90,7 +90,18 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
       <Filter Type="Srcs"/>
+<<<<<<< HEAD
       <File Path="$PSRCDIR/sources_1/new/servo.v">
+=======
+      <File Path="$PPRDIR/../Downloads/check_processor/PWMSerializer.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/servo_test.v">
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -380,6 +391,7 @@
       <File Path="$PPRDIR/../Downloads/check_processor/check_processor/Wrapper.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+<<<<<<< HEAD
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -388,6 +400,8 @@
       <File Path="$PPRDIR/../../../lab8_kit/PWMSerializer.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
+=======
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -409,6 +423,7 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+<<<<<<< HEAD
       <File Path="$PPRDIR/../../../lab8_kit/PWMDeserializer.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -417,6 +432,8 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+=======
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
       <File Path="$PPRDIR/../Downloads/check_processor/check_processor/Wrapper_tb.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -549,18 +566,19 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../MIPS_asm/basic_motor.mem">
+      <File Path="$PPRDIR/../MIPS/motor_test.mem">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../../MIPS_asm/basic.mem">
+      <File Path="$PPRDIR/../MIPS/servo_test.mem">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+<<<<<<< HEAD
       <File Path="$PPRDIR/../../MIPS_asm/no_nop.mem">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -574,6 +592,9 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../../MIPS_asm/example_master.mem">
+=======
+      <File Path="$PPRDIR/../MIPS/example_master.mem">
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -581,7 +602,11 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
+<<<<<<< HEAD
         <Option Name="TopModule" Val="servo"/>
+=======
+        <Option Name="TopModule" Val="servo_test"/>
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -665,7 +690,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../Final_GK_AD/Final_GK_AD.srcs/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../gik4/Final_GK_AD/Final_GK_AD.srcs/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -675,7 +700,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="synth_1_copy_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../Final_GK_AD/Final_GK_AD.srcs/utils_1/imports/synth_1">
+    <Run Id="synth_1_copy_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PPRDIR/../../../../gik4/Final_GK_AD/Final_GK_AD.srcs/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
         <Step Id="synth_design"/>
@@ -692,7 +717,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../Final_GK_AD/Final_GK_AD.srcs/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7a100tcsg324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../gik4/Final_GK_AD/Final_GK_AD.srcs/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
         <Step Id="init_design"/>

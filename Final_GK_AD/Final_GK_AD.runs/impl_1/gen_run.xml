@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1713893851">
   <File Type="ROUTE-PWR" Name="servo_power_routed.rpt"/>
   <File Type="PA-TCL" Name="servo.tcl"/>
@@ -78,6 +79,94 @@
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/servo.v">
+=======
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1713889762">
+  <File Type="ROUTE-PWR" Name="servo_test_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="servo_test.tcl"/>
+  <File Type="BITSTR-MMI" Name="servo_test.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="servo_test_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="servo_test_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="servo_test_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="servo_test_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="servo_test_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="servo_test_opt.dcp"/>
+  <File Type="OPT-DRC" Name="servo_test_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="servo_test.hwdef"/>
+  <File Type="PWROPT-DCP" Name="servo_test_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="servo_test_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="servo_test_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="servo_test_placed.dcp"/>
+  <File Type="PLACE-IO" Name="servo_test_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="servo_test_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="servo_test_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="servo_test_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="servo_test_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="servo_test_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="servo_test_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="servo_test.bin"/>
+  <File Type="PLACE-TIMING" Name="servo_test_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="servo_test_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="servo_test.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="servo_test_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="servo_test_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="servo_test_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="servo_test.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="servo_test_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="servo_test_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="servo_test_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="servo_test_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="servo_test_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="servo_test_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="servo_test_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="servo_test_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="servo_test_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="servo_test_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="servo_test_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="servo_test_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="servo_test_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="servo_test_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="servo_test_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="servo_test_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="servo_test_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="servo_test_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="servo_test_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="servo_test_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="servo_test_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="servo_test_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="servo_test_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="servo_test_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="servo_test_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="servo_test_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="servo_test_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="servo_test.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="servo_test_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="servo_test_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="servo_test.nky"/>
+  <File Type="BITSTR-BMM" Name="servo_test_bd.bmm"/>
+  <File Type="PDI-FILE" Name="servo_test.pdi"/>
+  <File Type="RCFI_FILE" Name="servo_test.rcfi"/>
+  <File Type="CFI_FILE" Name="servo_test.cfi"/>
+  <File Type="RNPI_FILE" Name="servo_test.rnpi"/>
+  <File Type="NPI_FILE" Name="servo_test.npi"/>
+  <File Type="RBD_FILE" Name="servo_test.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="servo_test.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="servo_test.sysdef"/>
+  <File Type="BG-BGN" Name="servo_test.bgn"/>
+  <File Type="BG-DRC" Name="servo_test.drc"/>
+  <File Type="RDI-RDI" Name="servo_test.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../Downloads/check_processor/PWMSerializer.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/servo_test.v">
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -367,6 +456,7 @@
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/Wrapper.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+<<<<<<< HEAD
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -375,6 +465,8 @@
     <File Path="$PPRDIR/../../../lab8_kit/PWMSerializer.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
+=======
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -396,6 +488,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+<<<<<<< HEAD
     <File Path="$PPRDIR/../../../lab8_kit/PWMDeserializer.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -404,6 +497,8 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+=======
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/Wrapper_tb.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -536,18 +631,19 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../MIPS_asm/basic_motor.mem">
+    <File Path="$PPRDIR/../MIPS/motor_test.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../MIPS_asm/basic.mem">
+    <File Path="$PPRDIR/../MIPS/servo_test.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+<<<<<<< HEAD
     <File Path="$PPRDIR/../../MIPS_asm/no_nop.mem">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -561,6 +657,9 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../../MIPS_asm/example_master.mem">
+=======
+    <File Path="$PPRDIR/../MIPS/example_master.mem">
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -568,7 +667,11 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
+<<<<<<< HEAD
       <Option Name="TopModule" Val="servo"/>
+=======
+      <Option Name="TopModule" Val="servo_test"/>
+>>>>>>> dc9812e3eb4292b1380054bc552933c16d025d2b
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
