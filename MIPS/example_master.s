@@ -19,14 +19,20 @@ main:
     bne $r3, $r0, leftPressed
     bne $r4, $r0, rightPressed
     # bne $r5, $r0, set_origin
-    # TO ADD SERVO:
-    # bne $r6, $r0, pen_up #this is control for servo
     #If the buttons are released, it stops
     addi $r11, $r0, 0
     addi $r12, $r0, 0
     addi $r13, $r0, 0
     addi $r14, $r0, 0
+    #checking if we've lifted up the pen - needs to be below so button functionality still works
+    bne $r6, $r0, pen_up
+    #if $r6 is 0, verify that pen is down
+    addi $r15, $r0, 0
     j main                      #Infinite loop
+
+pen_up:
+    addi $r15, $r0, 1
+    j main
 
 #instructions for when buttons are pressed
 upPressed:

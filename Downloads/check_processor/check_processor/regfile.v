@@ -78,7 +78,7 @@ module regfile (
 	register reg3(reg3out, clock, 1'b1, {31'b0, btn_LEFT}, ctrl_reset);         //BTNL pressed --> reg3 = 1
 	register reg4(reg4out, clock, 1'b1, {31'b0, btn_RIGHT}, ctrl_reset);         //BTNR pressed --> reg4 = 1
 	register reg5(reg5out, clock, 1'b1, {31'b0, btn_CENTER}, ctrl_reset);       //BTNC pressed --> set (0, 0) position
-	register reg6(reg6out, clock, 1'b1, {31'b0, switch[15]}, ctrl_reset);      //holds SW[15] to control servo
+	register reg6(reg6out, clock, 1'b1, switch[15], ctrl_reset);      //holds SW[15] to control servo
 	register reg7(reg7out, clock, reg7enable, data_writeReg, ctrl_reset);
 	register reg8(reg8out, clock, 1'b1, currentX, ctrl_reset);      //holds currentX position
 	register reg9(reg9out, clock, 1'b1, currentY, ctrl_reset);      //holds currentY position

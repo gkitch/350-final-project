@@ -1,99 +1,84 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1713889762">
-  <File Type="ROUTE-PWR" Name="servo_test_power_routed.rpt"/>
-  <File Type="PA-TCL" Name="servo_test.tcl"/>
-  <File Type="BITSTR-MMI" Name="servo_test.mmi"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="servo_test_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="servo_test_timing_summary_init.rpt"/>
-  <File Type="ROUTE-PWR-SUM" Name="servo_test_power_summary_routed.pb"/>
-  <File Type="REPORTS-TCL" Name="servo_test_reports.tcl"/>
-  <File Type="OPT-TIMING" Name="servo_test_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="servo_test_opt.dcp"/>
-  <File Type="OPT-DRC" Name="servo_test_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="servo_test.hwdef"/>
-  <File Type="PWROPT-DCP" Name="servo_test_pwropt.dcp"/>
-  <File Type="PWROPT-DRC" Name="servo_test_drc_pwropted.rpt"/>
-  <File Type="PWROPT-TIMING" Name="servo_test_timing_summary_pwropted.rpt"/>
-  <File Type="PLACE-DCP" Name="servo_test_placed.dcp"/>
-  <File Type="PLACE-IO" Name="servo_test_io_placed.rpt"/>
-  <File Type="PLACE-CLK" Name="servo_test_clock_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="servo_test_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="servo_test_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="servo_test_control_sets_placed.rpt"/>
-  <File Type="PLACE-SIMILARITY" Name="servo_test_incremental_reuse_placed.rpt"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="servo_test_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BIN" Name="servo_test.bin"/>
-  <File Type="PLACE-TIMING" Name="servo_test_timing_summary_placed.rpt"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="servo_test_postplace_pwropt.dcp"/>
-  <File Type="BITSTR-MSK" Name="servo_test.msk"/>
-  <File Type="POSTPLACE-PWROPT-TIMING" Name="servo_test_timing_summary_postplace_pwropted.rpt"/>
-  <File Type="PHYSOPT-DCP" Name="servo_test_physopt.dcp"/>
-  <File Type="PHYSOPT-DRC" Name="servo_test_drc_physopted.rpt"/>
-  <File Type="BITSTR-RBT" Name="servo_test.rbt"/>
-  <File Type="PHYSOPT-TIMING" Name="servo_test_timing_summary_physopted.rpt"/>
-  <File Type="ROUTE-ERROR-DCP" Name="servo_test_routed_error.dcp"/>
-  <File Type="ROUTE-DCP" Name="servo_test_routed.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="servo_test_routed_bb.dcp"/>
-  <File Type="ROUTE-DRC" Name="servo_test_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="servo_test_drc_routed.pb"/>
-  <File Type="ROUTE-DRC-RPX" Name="servo_test_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="servo_test_methodology_drc_routed.rpt"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="servo_test_methodology_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="servo_test_methodology_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="servo_test_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="servo_test_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="servo_test_route_status.pb"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="servo_test_timing_summary_routed.rpt"/>
-  <File Type="ROUTE-TIMING-PB" Name="servo_test_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="servo_test_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-SIMILARITY" Name="servo_test_incremental_reuse_routed.rpt"/>
-  <File Type="ROUTE-CLK" Name="servo_test_clock_utilization_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW" Name="servo_test_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="servo_test_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="servo_test_bus_skew_routed.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="servo_test_postroute_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="servo_test_postroute_physopt_bb.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="servo_test_timing_summary_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="servo_test_timing_summary_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="servo_test_timing_summary_postroute_physopted.rpx"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="servo_test_bus_skew_postroute_physopted.rpt"/>
-  <File Type="BG-BIT" Name="servo_test.bit"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="servo_test_bus_skew_postroute_physopted.pb"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="servo_test_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-NKY" Name="servo_test.nky"/>
-  <File Type="BITSTR-BMM" Name="servo_test_bd.bmm"/>
-  <File Type="PDI-FILE" Name="servo_test.pdi"/>
-  <File Type="RCFI_FILE" Name="servo_test.rcfi"/>
-  <File Type="CFI_FILE" Name="servo_test.cfi"/>
-  <File Type="RNPI_FILE" Name="servo_test.rnpi"/>
-  <File Type="NPI_FILE" Name="servo_test.npi"/>
-  <File Type="RBD_FILE" Name="servo_test.rbd"/>
+<GenRun Id="impl_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1713914556">
+  <File Type="ROUTE-PWR" Name="Wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Wrapper.tcl"/>
+  <File Type="BITSTR-MMI" Name="Wrapper.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Wrapper_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="Wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Wrapper_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="Wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="Wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="Wrapper.bin"/>
+  <File Type="PLACE-TIMING" Name="Wrapper_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Wrapper_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="Wrapper.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="Wrapper.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="Wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Wrapper_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="Wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="Wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="Wrapper_bd.bmm"/>
+  <File Type="PDI-FILE" Name="Wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="Wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="Wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="Wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="Wrapper.npi"/>
+  <File Type="RBD_FILE" Name="Wrapper.rbd"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="servo_test.ltx"/>
-  <File Type="BITSTR-SYSDEF" Name="servo_test.sysdef"/>
-  <File Type="BG-BGN" Name="servo_test.bgn"/>
-  <File Type="BG-DRC" Name="servo_test.drc"/>
-  <File Type="RDI-RDI" Name="servo_test.vdi"/>
+  <File Type="BITSTR-LTX" Name="Wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="Wrapper.bgn"/>
+  <File Type="BG-DRC" Name="Wrapper.drc"/>
+  <File Type="RDI-RDI" Name="Wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../Downloads/check_processor/PWMSerializer.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/servo_test.v">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/RAM.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -101,7 +86,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/ROM.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -109,7 +93,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/alu.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -117,7 +100,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/bitwise_and.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -125,7 +107,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/bitwise_not.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -133,7 +114,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/bitwise_or.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -141,7 +121,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/cl_adder.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -149,7 +128,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/cl_sub_adder.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -157,7 +135,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/dffe_ref.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -165,7 +142,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/divider.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -173,7 +149,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/latch.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -181,7 +156,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/multdiv.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -189,7 +163,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/multiplier.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -197,7 +170,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/mux_2.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -205,7 +177,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/mux_2_1bit.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -213,7 +184,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/mux_4.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -221,7 +191,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/mux_8.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -229,7 +198,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/processor.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -237,7 +205,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/regfile.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -245,7 +212,13 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/register.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/servo.v">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -253,7 +226,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sign_extend.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -261,7 +233,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sll.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -269,7 +240,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sll_1.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -277,7 +247,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sll_16.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -285,7 +254,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sll_2.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -293,7 +261,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sll_4.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -301,7 +268,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sll_8.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -309,7 +275,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sra.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -317,7 +282,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sra_1.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -325,7 +289,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sra_16.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -333,7 +296,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sra_2.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -341,7 +303,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sra_4.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -349,7 +310,6 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/sra_8.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -357,7 +317,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/stepper_2.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -365,13 +324,35 @@
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/tristate.v">
       <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../Downloads/check_processor/check_processor/Wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/servo_test_2.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Downloads/check_processor/PWMSerializer.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/servo_test.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -547,7 +528,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="servo_test"/>
+      <Option Name="TopModule" Val="Wrapper"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

@@ -103,9 +103,9 @@ module Wrapper (
     //input is SW[15], leftmost switch where down means pen lowered, up means pen raised
     //SW[15] is stored in reg6, read out from reg15 
     //JA[7], pin_servo is our FPGA output signal pin
-    PWMSerializer penServo(.clk(clock), .reset(reset), .regIn(servoReg), .signal(pin_servo));
     //in MIPS, we simply need to set $r15 != 0, which triggers loop to raise pen
-	
+    servo penControl(.clock(clock), .servoControl(servoReg), .servoPWM(pin_servo));
+
   	// ADD YOUR MEMORY FILE HERE
 	localparam INSTR_FILE = "example_master";
 	

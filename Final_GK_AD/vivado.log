@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Tue Apr 23 13:59:37 2024
+# Process ID: 16560
+# Current directory: C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7092 C:\Users\gik4\Downloads\ECE350_FinalProject\350-final-project\Final_GK_AD\Final_GK_AD.xpr
+# Log file: C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD/vivado.log
+# Journal file: C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Final_GK_AD\vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 23 17:44:05 2024...
