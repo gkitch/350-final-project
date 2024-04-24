@@ -174,7 +174,7 @@ demo_3: #ECE Demo
     addi $r13, $r0, 50000
     addi $r14, $r0, 0
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -184,52 +184,12 @@ demo_3: #ECE Demo
     addi $r11, $r0, 50000
     addi $r12, $r0, 0
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
     addi $r11, $r0, 0
     addi $r12, $r0, 0
-    #move RIGHT
-    addi $r13, $r0, 50000
-    addi $r14, $r0, 1
-    addi $r28, $r0, 1
-    sll $r29, $r28, 25
-    jal stall
-    nop
-    nop
-    addi $r13, $r0, 0
-    addi $r14, $r0, 0
-    #move LEFT
-    addi $r13, $r0, 50000
-    addi $r14, $r0, 0
-    addi $r28, $r0, 1
-    sll $r29, $r28, 25
-    jal stall
-    nop
-    nop
-    addi $r13, $r0, 0
-    addi $r14, $r0, 0
-    #move DOWN
-    addi $r11, $r0, 50000
-    addi $r12, $r0, 0
-    addi $r28, $r0, 1
-    sll $r29, $r28, 25
-    jal stall
-    nop
-    nop
-    addi $r11, $r0, 0
-    addi $r12, $r0, 0
-    #move RIGHT
-    addi $r13, $r0, 50000
-    addi $r14, $r0, 1
-    addi $r28, $r0, 1
-    sll $r29, $r28, 25
-    jal stall
-    nop
-    nop
-    addi $r13, $r0, 0
-    addi $r14, $r0, 0
     #move RIGHT
     addi $r13, $r0, 50000
     addi $r14, $r0, 1
@@ -240,13 +200,68 @@ demo_3: #ECE Demo
     nop
     addi $r13, $r0, 0
     addi $r14, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    addi $r15, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 22
+    jal stall
+    nop
+    nop
+
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    addi $r15, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 22
+    jal stall
+    nop
+    nop
 
     #Letter C
     #move RIGHT
     addi $r13, $r0, 50000
     addi $r14, $r0, 1
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -256,7 +271,7 @@ demo_3: #ECE Demo
     addi $r13, $r0, 50000
     addi $r14, $r0, 0
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -266,7 +281,7 @@ demo_3: #ECE Demo
     addi $r11, $r0, 50000
     addi $r12, $r0, 1
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -276,7 +291,7 @@ demo_3: #ECE Demo
     addi $r11, $r0, 50000
     addi $r12, $r0, 1
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -286,7 +301,7 @@ demo_3: #ECE Demo
     addi $r13, $r0, 50000
     addi $r14, $r0, 1
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -296,7 +311,7 @@ demo_3: #ECE Demo
     addi $r13, $r0, 50000
     addi $r14, $r0, 0
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -306,7 +321,7 @@ demo_3: #ECE Demo
     addi $r11, $r0, 50000
     addi $r12, $r0, 0
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -316,22 +331,12 @@ demo_3: #ECE Demo
     addi $r11, $r0, 50000
     addi $r12, $r0, 0
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
     addi $r11, $r0, 0
     addi $r12, $r0, 0
-    #move RIGHT
-    addi $r13, $r0, 50000
-    addi $r14, $r0, 1
-    addi $r28, $r0, 1
-    sll $r29, $r28, 25
-    jal stall
-    nop
-    nop
-    addi $r13, $r0, 0
-    addi $r14, $r0, 0
     #move RIGHT
     addi $r13, $r0, 50000
     addi $r14, $r0, 1
@@ -343,12 +348,37 @@ demo_3: #ECE Demo
     addi $r13, $r0, 0
     addi $r14, $r0, 0
 
+    addi $r15, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 22
+    jal stall
+    nop
+    nop
+
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    addi $r15, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 22
+    jal stall
+    nop
+    nop
+
     #Letter E
     #move RIGHT
     addi $r13, $r0, 50000
     addi $r14, $r0, 1
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -358,7 +388,7 @@ demo_3: #ECE Demo
     addi $r13, $r0, 50000
     addi $r14, $r0, 0
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -368,7 +398,7 @@ demo_3: #ECE Demo
     addi $r11, $r0, 50000
     addi $r12, $r0, 1
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -378,7 +408,7 @@ demo_3: #ECE Demo
     addi $r13, $r0, 50000
     addi $r14, $r0, 1
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -388,7 +418,7 @@ demo_3: #ECE Demo
     addi $r13, $r0, 50000
     addi $r14, $r0, 0
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -398,7 +428,7 @@ demo_3: #ECE Demo
     addi $r11, $r0, 50000
     addi $r12, $r0, 1
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
@@ -408,7 +438,7 @@ demo_3: #ECE Demo
     addi $r13, $r0, 50000
     addi $r14, $r0, 1
     addi $r28, $r0, 1
-    sll $r29, $r28, 25
+    sll $r29, $r28, 24
     jal stall
     nop
     nop
