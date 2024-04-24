@@ -56,8 +56,8 @@ module Wrapper (
 	//call stepper.v for controlling x, y stepping with designated speed/direction
 	//we call our x / y steppers if either buttons indicate or MIPS writes to those registers (and SW is high)
     wire moveL, moveR, moveU, moveD, moveServo;
-    assign moveL = (xSpeed != 32'd0 && xDirection == 32'd1) ? 1'b1 : 1'b0;
-    assign moveR = (xSpeed != 32'd0 && xDirection == 32'd0) ? 1'b1 : 1'b0;
+    assign moveR = (xSpeed != 32'd0 && xDirection == 32'd1) ? 1'b1 : 1'b0;
+    assign moveL = (xSpeed != 32'd0 && xDirection == 32'd0) ? 1'b1 : 1'b0;
     assign moveU = (ySpeed != 32'd0 && yDirection == 32'd1) ? 1'b1 : 1'b0;
     assign moveD = (ySpeed != 32'd0 && yDirection == 32'd0) ? 1'b1 : 1'b0;
     assign moveServo = (servoReg != 32'b0) ? 1'b1 : 1'b0;

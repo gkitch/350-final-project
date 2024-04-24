@@ -97,7 +97,7 @@ module regfile (
 	register reg22(reg22out, clock, 1'b1, switch[2], ctrl_reset);                  //r22 toggles to demo 2
 	register reg23(reg23out, clock, 1'b1, switch[3], ctrl_reset);                  //r23 toggles to ECE demo
 	register reg24(reg24out, clock, 1'b1, switch[4], ctrl_reset);                  //r24 toggles spiraling square demo
-	register reg25(reg25out, clock, reg25enable, data_writeReg, ctrl_reset);
+	register reg25(reg25out, clock, 1'b1, switch[5], ctrl_reset);                  //overlapping square spirograph demo
 	register reg26(reg26out, clock, reg26enable, data_writeReg, ctrl_reset);
 	register reg27(reg27out, clock, reg27enable, data_writeReg, ctrl_reset);
 	register reg28(reg28out, clock, reg28enable, data_writeReg, ctrl_reset);

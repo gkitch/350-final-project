@@ -13,6 +13,7 @@ main:
     bne $r22, $r0, demo_2 #Square
     bne $r23, $r0, demo_3 #ECE
     bne $r24, $r0, demo_4 #Spiraling square
+    bne $r25, $r0, demo_5 #Overlapping squares
     #checking if we have pressed any buttons
     bne $r1, $r0, upPressed
     bne $r2, $r0, downPressed
@@ -79,15 +80,20 @@ return_to_y_origin:
     addi $r12, $r0, 0
     addi $r7, $r0, 0
     addi $r9, $r0, 0
-    nop
-    nop
+    #put down pen
+    addi $r15, $r0, 0
     j main
+    nop
+    nop
+    #continue to return_to_x_origin below
 
 return_to_x_origin:
     #move left until we reach our starting y point
     nop
     nop
     nop
+    #pickup pen
+    addi $r15, $r0, 1
     addi $r7, $r7, 1
     addi $r13, $r0, 50000
     addi $r14, $r0, 0
@@ -111,7 +117,7 @@ demo_1:
     addi $r14, $r0, 1
 
     addi $r28, $r0, 1
-    sll $r29, $r28, 26
+    sll $r29, $r28, 25
 
     jal stall
     nop
@@ -131,7 +137,7 @@ demo_2:
     addi $r12, $r0, 0
     #move RIGHT
     addi $r13, $r0, 50000
-    addi $r14, $r0, 0
+    addi $r14, $r0, 1
     addi $r28, $r0, 1
     sll $r29, $r28, 26
     jal stall
@@ -151,7 +157,7 @@ demo_2:
     addi $r12, $r0, 0
     #move LEFT
     addi $r13, $r0, 50000
-    addi $r14, $r0, 1
+    addi $r14, $r0, 0
     addi $r28, $r0, 1
     sll $r29, $r28, 26
     jal stall
@@ -576,6 +582,681 @@ demo_4: #Spiraling square
     addi $r13, $r0, 0
     addi $r14, $r0, 0
 
+    j main
+
+demo_5:
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move LEFT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move UP
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    #move RIGHT
+    addi $r13, $r0, 50000
+    addi $r14, $r0, 1
+    addi $r28, $r0, 1
+    sll $r29, $r28, 24
+    jal stall
+    nop
+    nop
+    addi $r13, $r0, 0
+    addi $r14, $r0, 0
+    #move DOWN
+    addi $r11, $r0, 50000
+    addi $r12, $r0, 0
+    addi $r28, $r0, 1
+    sll $r29, $r28, 23
+    jal stall
+    nop
+    nop
+    addi $r11, $r0, 0
+    addi $r12, $r0, 0
+    
     j main
 
 stall:

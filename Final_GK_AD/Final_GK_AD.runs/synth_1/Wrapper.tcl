@@ -91,6 +91,7 @@ read_mem {
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/Downloads/check_processor/fpga_test2.mem
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/MIPS/motor_test.mem
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/MIPS/servo_test.mem
+  C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/MIPS/master.mem
   C:/Users/gik4/Downloads/ECE350_FinalProject/350-final-project/MIPS/example_master.mem
 }
 read_verilog -library xil_defaultlib {
