@@ -1,14 +1,6 @@
 # 350-final-project
-CURRENT STATUS:
-Functional CPU on FPGA board - LEDs reflect SW input switches, when we lw / sw to specific memory locations (see fpga_test1.s), we modify which LEDs are on.
+Building a 2D Drawing Robot using FPGA board, 5-stage pipeline processor supporting MIPS architecture in Verilog, additional MIPS instructions and logic, and Verilog control modules for motor functionality.
 
-GENERAL
-When working on a new project, create a branch to preserve historical code.
-On local device:
-  //create new directory for project or navigate to existing directory
-  git clone *insert https key here*
-  //now, you will need to verify git login
-  //if existing directory, then may need to pull from git to get most recent code
-Then, add / commit -m / push code to update files
-Once testing is complete, can merge back with main branch to update central code
-  
+This project included a frame allowing for 2D movement by control of stepper motors on an x and y axis, as well as a servo motor for lifting a pen up and down. The FPGA directly sends a signal to the servo via pin JA7, while the steppers require an A4988 motor driver, which is fed step and direction signals and produces the proper outputs for driving the motor. Both motors requre a level converter to produce a 5V signal, and the steppers have an additional 20V input for motor voltage.
+
+Information is passed from MIPS to Verilog via the register file; various registers hold values which can be either hardcoded by Verilog to indicate an input switch or button, as well as modified in the MIPS script to adjust motor position, speed, or direction based on these inputs. In addition, demos are hardcoded into the switches, displaying the capabilities of the robot with just a few lines of MIPS——any drawing with lines only on the 2D grid can be programmed and then drawn, or simply created in free draw using the buttons.
